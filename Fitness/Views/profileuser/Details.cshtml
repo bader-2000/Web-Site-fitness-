@@ -1,0 +1,128 @@
+﻿@model Fitness.Models.Profile
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Title"] = "ProfileUser";
+   Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+
+}
+
+<link href="~/DesignProfileUser/style.css" rel="stylesheet" id="bootstrap-css">
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container emp-profile">
+   
+        <div class="row">
+            <div class="col-md-4">
+            <div class="profile-img" style="border-radius:30%;">
+                    <img src=@Url.Content("~/images/" + Model?.Photo) )style="border-radius:20%;" width="150" height="100" alt="my photo" />
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                <h5 style="color:black ; font-size:18px; font-weight:bold;">
+                        @Html.DisplayFor(model => model.Name)@Html.DisplayFor(model => model.Lname)
+                    </h5>
+                    <h6>
+                    @Html.DisplayNameFor(model => model.Username)
+                        @Html.DisplayFor(model => model.Username)
+                    </h6>
+                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"> My Infromation </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a type="button"  style="  border: none;
+                  border-radius: 1.5rem;
+                  width: 70%;
+                  padding: 2%;
+                  font-weight: 600;
+                  color: wheat;
+                  cursor: pointer;
+                  background-color: black;"
+               asp-controller="ProfileUser" asp-action="Edit" asp-route-id="@Model?.Profileid">Edit</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                   @*  <p>WORK LINK</p>
+                    <a href="">Website Link</a><br />
+                    <a href="">Bootsnipp Profile</a><br />
+                    <a href="">Bootply Profile</a>
+                    <p>SKILLS</p>
+                    <a href="">Web Designer</a><br />
+                    <a href="">Web Developer</a><br />
+                    <a href="">WordPress</a><br />
+                    <a href="">WooCommerce</a><br />
+                    <a href="">PHP, .Net</a><br / *@>
+                    
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" >
+
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style ="color:black ; font-size:18px; font-weight:bold;">Name</label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style ="color:white ; font-size:18px; font-weight:bold;">@Html.DisplayFor(model => model.Name)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style ="color:black ; font-size:18px; font-weight:bold;">Last name</label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style="color:white ; font-size:18px; font-weight:bold;">@Html.DisplayFor(model => model.Lname)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style ="color:black ; font-size:18px; font-weight:bold;">@Html.DisplayNameFor(model => model.Email)</label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style="color:white ; font-size:18px; font-weight:bold;"> @Html.DisplayFor(model => model.Email)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style="color:black ; font-size:18px; font-weight:bold;">@Html.DisplayNameFor(model => model.Username)</label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style="color:white ; font-size:18px; font-weight:bold;"> @Html.DisplayFor(model => model.Username)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style="color:black ; font-size:18px; font-weight:bold;"> @Html.DisplayNameFor(model => model.Userpassword)</label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style="color:white ; font-size:18px; font-weight:bold;"> @Html.DisplayFor(model => model.Userpassword)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <label style="color:black ; font-size:18px; font-weight:bold;"> Birth Date </label>
+                            </div>
+                            <div class="col-md-6">
+                            <p style="color:white ; font-size:18px; font-weight:bold;">@Html.DisplayFor(model => model.DateOfBirth)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+   
+</div>

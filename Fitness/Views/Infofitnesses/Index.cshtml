@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Fitness.Models.Infofitness>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aboutus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facebook)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linkedin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageFileaboutus)
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inprofile)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aboutus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linkedin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photoaboutus)
+                    <img src=@Url.Content("~/images/" + item.Photoaboutus)
+                               asp-append-version="true" style="border-radius:20%;" width="100" height="100" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inprofile.Profileid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idif">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idif">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idif">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
