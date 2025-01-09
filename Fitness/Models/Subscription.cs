@@ -11,7 +11,7 @@ public partial class Subscription
 
     public string? Nameplan { get; set; }
 
-    public string? Price { get; set; }
+    public decimal? Price { get; set; }
 
     public decimal? Sidwop { get; set; }
 

@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "Fitness\\Views\\Home\\Index.cshtml",
+      "projectTarget": "",
+      "name": "Index.cshtml"
+    }
+  ]
+}

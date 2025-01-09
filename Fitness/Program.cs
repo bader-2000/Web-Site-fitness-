@@ -15,7 +15,7 @@ namespace Fitness
                 options.IdleTimeout = TimeSpan.FromMinutes(60);
             });
             builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("FitnessDBSystemConnection")));
-
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

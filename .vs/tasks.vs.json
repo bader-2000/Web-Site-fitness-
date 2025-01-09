@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Index",
+      "appliesTo": "Fitness/Views/Home/Index.cshtml",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-trainers",
+      "appliesTo": "Fitness/Views/Home/trainers.cshtml",
+      "type": "launch"
+    }
+  ]
+}

@@ -169,9 +169,8 @@ public partial class ModelContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("NAMEPLAN");
             entity.Property(e => e.Price)
-                .HasMaxLength(25)
-                .IsUnicode(false)
-                .HasColumnName("PRICE");
+                 .HasColumnType("NUMBER")
+                 .HasColumnName("PRICE");
             entity.Property(e => e.Sidwop)
                 .HasColumnType("NUMBER")
                 .HasColumnName("SIDWOP");
