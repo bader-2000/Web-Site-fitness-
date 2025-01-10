@@ -1,0 +1,85 @@
+﻿@model Fitness.Models.Profile
+
+@{
+    ViewData["Title"] = "Profile Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper" style="margin-top: 100px;">
+    <div class="card">
+        <div class="card-header">
+            <h4>Profile Details</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <!-- Name -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <!-- Last Name -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Lname)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Lname)
+                </dd>
+
+                <!-- Email -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <!-- Username -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Username)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Username)
+                </dd>
+
+                <!-- Password -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Userpassword)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Userpassword)
+                </dd>
+
+                <!-- Photo -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Photo)
+                </dt>
+                <dd class="col-sm-9">
+                    <img src="@Url.Content("~/images/" + Model.Photo)" class="img-fluid" style="border-radius: 50%;" alt="Profile Photo" width="100" height="100" />
+                </dd>
+
+                <!-- Date of Birth -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.DateOfBirth)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.DateOfBirth)
+                </dd>
+
+                <!-- Role -->
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Role)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Role.Rname)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer">
+            <a asp-action="Edit" asp-route-id="@Model.Profileid" class="btn btn-primary">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>

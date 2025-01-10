@@ -117,6 +117,9 @@ public partial class ModelContext : DbContext
                 .HasMaxLength(150)
                 .IsUnicode(false)
                 .HasColumnName("PHOTO");
+            entity.Property(e => e.Roleid)
+                .HasColumnType("NUMBER")
+                .HasColumnName("ROLEID");
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -125,6 +128,10 @@ public partial class ModelContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("USERPASSWORD");
+
+            entity.HasOne(d => d.Role).WithMany(p => p.Profiles)
+                .HasForeignKey(d => d.Roleid)
+                .HasConstraintName("FK_ROLE");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -141,14 +148,6 @@ public partial class ModelContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("RNAME");
-            entity.Property(e => e.Rprofileid)
-                .HasColumnType("NUMBER")
-                .HasColumnName("RPROFILEID");
-
-            entity.HasOne(d => d.Rprofile).WithMany(p => p.Roles)
-                .HasForeignKey(d => d.Rprofileid)
-                .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK_ROLE");
         });
 
         modelBuilder.Entity<Subscription>(entity =>

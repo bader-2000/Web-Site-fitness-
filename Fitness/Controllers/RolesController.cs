@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fitness.Models;
 
-namespace Fitness.Controllers
+namespace fitness.Controllers
 {
     public class RolesController : Controller
     {
@@ -21,8 +21,9 @@ namespace Fitness.Controllers
         // GET: Roles
         public async Task<IActionResult> Index()
         {
-            var modelContext = _context.Roles.Include(r => r.Rprofile);
-            return View(await modelContext.ToListAsync());
+              return _context.Roles != null ? 
+                          View(await _context.Roles.ToListAsync()) :
+                          Problem("Entity set 'ModelContext.Roles'  is null.");
         }
 
         // GET: Roles/Details/5
@@ -34,7 +35,6 @@ namespace Fitness.Controllers
             }
 
             var role = await _context.Roles
-                .Include(r => r.Rprofile)
                 .FirstOrDefaultAsync(m => m.Roleid == id);
             if (role == null)
             {
@@ -47,7 +47,6 @@ namespace Fitness.Controllers
         // GET: Roles/Create
         public IActionResult Create()
         {
-            ViewData["Rprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid");
             return View();
         }
 
@@ -56,7 +55,7 @@ namespace Fitness.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Roleid,Rname,Rprofileid")] Role role)
+        public async Task<IActionResult> Create([Bind("Roleid,Rname")] Role role)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +63,6 @@ namespace Fitness.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Rprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", role.Rprofileid);
             return View(role);
         }
 
@@ -81,7 +79,6 @@ namespace Fitness.Controllers
             {
                 return NotFound();
             }
-            ViewData["Rprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", role.Rprofileid);
             return View(role);
         }
 
@@ -90,7 +87,7 @@ namespace Fitness.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(decimal id, [Bind("Roleid,Rname,Rprofileid")] Role role)
+        public async Task<IActionResult> Edit(decimal id, [Bind("Roleid,Rname")] Role role)
         {
             if (id != role.Roleid)
             {
@@ -117,7 +114,6 @@ namespace Fitness.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Rprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", role.Rprofileid);
             return View(role);
         }
 
@@ -130,7 +126,6 @@ namespace Fitness.Controllers
             }
 
             var role = await _context.Roles
-                .Include(r => r.Rprofile)
                 .FirstOrDefaultAsync(m => m.Roleid == id);
             if (role == null)
             {

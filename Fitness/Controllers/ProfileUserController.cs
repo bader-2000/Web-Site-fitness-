@@ -1,6 +1,7 @@
 ﻿using Fitness.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fitness.Controllers
@@ -16,29 +17,32 @@ namespace Fitness.Controllers
 			_context = context;
             _webHostEnvironment = webHostEnvironment;
 		}
-		public IActionResult Index()
-		{
-			return View();
-		}
+        public IActionResult Index()
+        {
+            var profiles = _context.Profiles.Include(p => p.Role).ToList();
+            return View(profiles);
+        }
 
-		public async Task<IActionResult> Details(decimal? id)
-		{
-			if (id == null || _context.Profiles == null)
-			{
-				return NotFound();
-			}
+        public async Task<IActionResult> Details(decimal? id)
+        {
+            if (id == null || _context.Profiles == null)
+            {
+                return NotFound();
+            }
 
-			var profile = await _context.Profiles
-				.FirstOrDefaultAsync(m => m.Profileid == id);
-			if (profile == null)
-			{
-				return NotFound();
-			}
+            var profile = await _context.Profiles
+                .Include(p => p.Role)
+                .FirstOrDefaultAsync(m => m.Profileid == id);
 
-			return View(profile);
-		}
+            if (profile == null)
+            {
+                return NotFound();
+            }
 
-        // GET: Profiles/Edit/5
+            return View(profile);
+        }
+
+   
         public async Task<IActionResult> Edit(decimal? id)
         {
             if (id == null || _context.Profiles == null)
@@ -52,15 +56,14 @@ namespace Fitness.Controllers
             {
                 return NotFound();
             }
+
+            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid);
             return View(profile);
         }
 
-        // POST: Profiles/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(decimal id, [Bind("Profileid,Name,Username,Userpassword,ImageFile,DateOfBirth,Email,Lname")] Profile profile)
+        public async Task<IActionResult> Edit(decimal id, [Bind("Profileid,Name,Username,Userpassword,ImageFile,DateOfBirth,Email,Lname,Roleid")] Profile profile)
         {
             if (id != profile.Profileid)
             {
@@ -69,19 +72,21 @@ namespace Fitness.Controllers
 
             if (ModelState.IsValid)
             {
-
-                String wwwRootPath = _webHostEnvironment.WebRootPath;
-                String filename = Guid.NewGuid().ToString() + "_" + profile.ImageFile.FileName;
-                String path = Path.Combine(wwwRootPath + "/images/" + filename);
-
-                using (var filestrem = new FileStream(path, FileMode.Create))
-                {
-                    await profile.ImageFile.CopyToAsync(filestrem);
-                }
-                profile.Photo = filename;
-
                 try
                 {
+                    if (profile.ImageFile != null)
+                    {
+                        string wwwRootPath = _webHostEnvironment.WebRootPath;
+                        string filename = Guid.NewGuid().ToString() + "_" + profile.ImageFile.FileName;
+                        string path = Path.Combine(wwwRootPath + "/images/" + filename);
+
+                        using (var filestrem = new FileStream(path, FileMode.Create))
+                        {
+                            await profile.ImageFile.CopyToAsync(filestrem);
+                        }
+                        profile.Photo = filename;
+                    }
+
                     _context.Update(profile);
                     await _context.SaveChangesAsync();
                 }
@@ -98,11 +103,17 @@ namespace Fitness.Controllers
                 }
                 return RedirectToAction(nameof(Details), new { id = profile.Profileid });
             }
+
+         
+            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid);
             return View(profile);
         }
+
         private bool ProfileExists(decimal id)
-{
-  return (_context.Profiles?.Any(e => e.Profileid == id)).GetValueOrDefault();
-}
+        {
+            return (_context.Profiles?.Any(e => e.Profileid == id)).GetValueOrDefault();
+        }
     }
 }
+
+

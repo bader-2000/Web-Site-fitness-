@@ -9,7 +9,5 @@ public partial class Role
 
     public string Rname { get; set; } = null!;
 
-    public decimal? Rprofileid { get; set; }
-
-    public virtual Profile? Rprofile { get; set; }
+    public virtual ICollection<Profile> Profiles { get; set; } = new List<Profile>();
 }

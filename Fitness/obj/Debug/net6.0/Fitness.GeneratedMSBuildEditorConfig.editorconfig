@@ -18,8 +18,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/listProfileM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbGlzdFByb2ZpbGVNLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/listProfileT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbGlzdFByb2ZpbGVULmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Home/aboutus.cshtml]

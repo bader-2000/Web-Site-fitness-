@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Fitness.Models;
-
 public partial class Profile
 {
     public decimal Profileid { get; set; }
@@ -19,19 +18,21 @@ public partial class Profile
 
     public string? Photo { get; set; }
 
-    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
     public DateTime? DateOfBirth { get; set; }
 
     public string? Email { get; set; }
 
     public string? Lname { get; set; }
 
+    public decimal? Roleid { get; set; }
+
+
     [NotMapped]
     public virtual IFormFile ImageFile { get; set; }
 
     public virtual ICollection<Infofitness> Infofitnesses { get; set; } = new List<Infofitness>();
 
-    public virtual ICollection<Role> Roles { get; set; } = new List<Role>();
+    public virtual Role? Role { get; set; }
 
     public virtual ICollection<Testimonial> Testimonials { get; set; } = new List<Testimonial>();
 

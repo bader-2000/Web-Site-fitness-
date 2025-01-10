@@ -1,5 +1,7 @@
+//using Fitness.Models;
 using Fitness.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace Fitness
 {
@@ -14,8 +16,9 @@ namespace Fitness
             builder.Services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(60);
             });
-            builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("FitnessDBSystemConnection")));
-           
+           builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("FitnessDBSystemConnection")));
+         
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
