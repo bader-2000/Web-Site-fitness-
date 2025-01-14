@@ -1,0 +1,205 @@
+﻿@model Fitness.Models.Workoutplan
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutTranier.cshtml";
+}
+
+
+
+
+
+
+<div class="content-wrapper" style="margin-top: 100px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header text-center">
+                    <div style="background-color: dimgray; padding: 10px; display: inline-block; border-radius: 5px;">
+                        <h1 style="margin: 10px;color:white">Now Work Out Plan</h1>
+                    </div>
+                
+                </div>
+                <div class="card-body">
+                    <form asp-action="CreateNewPlan" asp-controller="Tranier">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <!-- Number of Weeks -->
+                        <div class="form-group">
+                            <label asp-for="Numberofweek" class="control-label">Number of Weeks for Plan</label>
+                            <input asp-for="Numberofweek" class="form-control" placeholder="Enter number of weeks" />
+                            <span asp-validation-for="Numberofweek" class="text-danger"></span>
+                        </div>
+
+                        <!-- Goals -->
+                        <div class="form-group">
+                            <label asp-for="Goals" class="control-label">Goals</label>
+                            <input asp-for="Goals" class="form-control" placeholder="Enter your goals" />
+                            <span asp-validation-for="Goals" class="text-danger"></span>
+                        </div>
+
+                        <!-- Day 1 to Day 7 -->
+                        <div class="form-group">
+                            <label asp-for="Day1" class="control-label">Day 1</label>
+                            <input asp-for="Day1" class="form-control" placeholder="Enter Exercise for Day 1" />
+                            <span asp-validation-for="Day1" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day2" class="control-label">Day 2</label>
+                            <input asp-for="Day2" class="form-control" placeholder="Enter Exercise plan for Day 2" />
+                            <span asp-validation-for="Day2" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day3" class="control-label">Day 3</label>
+                            <input asp-for="Day3" class="form-control" placeholder="Enter Exercise plan for Day 3" />
+                            <span asp-validation-for="Day3" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day4" class="control-label">Day 4</label>
+                            <input asp-for="Day4" class="form-control" placeholder="Enter Exercise plan for Day 4" />
+                            <span asp-validation-for="Day4" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day5" class="control-label">Day 5</label>
+                            <input asp-for="Day5" class="form-control" placeholder="Enter Exercise plan for Day 5" />
+                            <span asp-validation-for="Day5" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day6" class="control-label">Day 6</label>
+                            <input asp-for="Day6" class="form-control" placeholder="Enter Exercise plan for Day 6" />
+                            <span asp-validation-for="Day6" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Day7" class="control-label">Day 7</label>
+                            <input asp-for="Day7" class="form-control" placeholder="Enter Exercise plan for Day 7" />
+                            <span asp-validation-for="Day7" class="text-danger"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group mt-4">
+                            <input type="submit" value="Create" class="btn btn-success w-100" />
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-controller="Tranier" asp-action="listProfileMembar" class="btn btn-link">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <div class="content-wrapper" style="margin-top:100px">
+    <div class="row">
+        <div class="card-body">
+           
+
+
+            
+
+
+
+
+            <h1>Create</h1>
+
+            <h4>Now Work Out Plan</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+            <form asp-action="CreateNewPlan" asp-controller="Tranier">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Numberofweek" class="control-label"></label>
+                <input asp-for="Numberofweek" class="form-control" />
+                <span asp-validation-for="Numberofweek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Goals" class="control-label"></label>
+                <input asp-for="Goals" class="form-control"/>
+                <span asp-validation-for="Goals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day1" class="control-label"></label>
+                <input asp-for="Day1" class="form-control" />
+                <span asp-validation-for="Day1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day2" class="control-label"></label>
+                <input asp-for="Day2" class="form-control" />
+                <span asp-validation-for="Day2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day3" class="control-label"></label>
+                <input asp-for="Day3" class="form-control" />
+                <span asp-validation-for="Day3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day4" class="control-label"></label>
+                <input asp-for="Day4" class="form-control" />
+                <span asp-validation-for="Day4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day5" class="control-label"></label>
+                <input asp-for="Day5" class="form-control" />
+                <span asp-validation-for="Day5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day6" class="control-label"></label>
+                <input asp-for="Day6" class="form-control" />
+                <span asp-validation-for="Day6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day7" class="control-label"></label>
+                <input asp-for="Day7" class="form-control" />
+                <span asp-validation-for="Day7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+                <a asp-controller="Tranier" asp-action="listProfileMembar">Back to List</a>
+</div> 
+
+        </div>
+    </div>
+</div> *@
+
+
+ @*  @section Scripts {
+      @{
+          await Html.RenderPartialAsync("_ValidationScriptsPartial");
+      }
+ } *@

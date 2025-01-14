@@ -18,6 +18,7 @@ public partial class Profile
 
     public string? Photo { get; set; }
 
+    [DataType(DataType.Date)]
     public DateTime? DateOfBirth { get; set; }
 
     public string? Email { get; set; }

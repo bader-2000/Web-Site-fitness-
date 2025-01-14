@@ -1,0 +1,146 @@
+﻿@model Fitness.Models.Profile
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+
+}
+
+ @*  <link rel="stylesheet" href="~/DesignAuth/style.css">  *@
+
+<style>
+    .error-msg{
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+<div class="container">
+    <section id="formHolder">
+        <div class="row">
+            <!-- Brand Box -->
+            <div class="col-sm-6 brand">
+                <a href="#" class="logo">Bader <span>.</span></a>
+
+                <div class="heading">
+                    <h2>Fitness</h2>
+                    <p>Your Right Choice</p>
+                </div>
+
+                <div class="success-msg">
+                    <p>Great! You are one of our members now</p>
+                    <a href="#" class="profile">Your Profile</a>
+                </div>
+            </div>
+
+            <!-- Form Box -->
+            <div class="col-sm-6 form">
+                <!-- Signup Form -->
+                <div class="signup form-peice">
+                    <form method="post" asp-action="Register" asp-controller="Auth" class="signup-form" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label asp-for="Name">First Name</label>
+                            <input type="text" asp-for="Name" class="name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Lname">Last Name</label>
+                            <input type="text" asp-for="Lname" class="name">
+                            <span asp-validation-for="Lname" class="text-danger"></span>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email">Email</label>
+                            <input type="email" asp-for="Email" class="email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <span class="error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Username">User Name</label>
+                            <input type="text" asp-for="Username" class="text-danger">
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Userpassword">Password</label>
+                            <input type="password" asp-for="Userpassword" class="pass">
+                            <span asp-validation-for="Userpassword" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input asp-for="ImageFile" class="form-control" type="file" />
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <input asp-for="DateOfBirth" class="form-control" type="date" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+
+                        <div class="CTA">
+                            <input type="submit" value="Signup Now">
+                            <a href="#login" class="switch">I have an account</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Login Form -->
+                <div class="login form-peice">
+                    <form asp-action="login" asp-controller="Auth" class="login-form" method="post">
+                        <div class="form-group">
+                            <label asp-for="Username">User Name</label>
+                            <input type="text" asp-for="Username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Userpassword">Password</label>
+                            <input type="password" asp-for="Userpassword" required>
+                        </div>
+
+                        <!-- Error Message -->
+                        @if (ViewBag.ErrorMessage != null)
+                        {
+                            <div class="error-msg">
+                                @ViewBag.ErrorMessage
+                            </div>
+                        }
+
+                        <div class="CTA">
+                            <input type="submit" value="Login">
+                            <a href="#" class="switch">I'm New</a>
+                        </div>
+                        <div class="CTA">
+                            <a asp-action="index" asp-controller="Home" >Are you Guest</a> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+</div>
+
+
+ @* 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="~/DesignAuth/site.js"></script>
+ 
+ *@
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,17 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+    var UserRoleID = Context.Session.GetInt32("UserRoleID"); 
+
+    if (UserRoleID.HasValue && (UserRoleID == 1 || UserRoleID == 2))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+    }
+   
 }
 
 <link href="~/DesignProfileUser/style.css" rel="stylesheet" id="bootstrap-css">

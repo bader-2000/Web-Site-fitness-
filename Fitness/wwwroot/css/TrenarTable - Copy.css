@@ -1,0 +1,88 @@
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    color: #f0f0f0;
+    overflow-x: auto;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #333;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #555;
+}
+
+
+.table img {
+    border-radius: 50%;
+}
+
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.table td, .table th {
+    border-top: 1px solid #444;
+}
+
+
+.table th {
+    background-color: #222;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+
+.table td {
+    color: #ddd;
+}
+
+
+.table-hover tbody tr:hover td {
+    color: #fff;
+}
+
+
+th.fixed-width, td.fixed-width {
+    width: 150px;
+    word-wrap: break-word;
+    white-space: normal;
+    height: auto;
+}
+
+td, th {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+    .content-wrapper
+
+{
+    min-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+</style >

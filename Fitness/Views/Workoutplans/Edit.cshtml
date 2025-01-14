@@ -1,0 +1,74 @@
+﻿@model Fitness.Models.Workoutplan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Workoutplan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Idwop" />
+            <div class="form-group">
+                <label asp-for="Numberofweek" class="control-label"></label>
+                <input asp-for="Numberofweek" class="form-control" />
+                <span asp-validation-for="Numberofweek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Goals" class="control-label"></label>
+                <input asp-for="Goals" class="form-control" />
+                <span asp-validation-for="Goals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day1" class="control-label"></label>
+                <input asp-for="Day1" class="form-control" />
+                <span asp-validation-for="Day1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day2" class="control-label"></label>
+                <input asp-for="Day2" class="form-control" />
+                <span asp-validation-for="Day2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day3" class="control-label"></label>
+                <input asp-for="Day3" class="form-control" />
+                <span asp-validation-for="Day3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day4" class="control-label"></label>
+                <input asp-for="Day4" class="form-control" />
+                <span asp-validation-for="Day4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day5" class="control-label"></label>
+                <input asp-for="Day5" class="form-control" />
+                <span asp-validation-for="Day5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day6" class="control-label"></label>
+                <input asp-for="Day6" class="form-control" />
+                <span asp-validation-for="Day6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Day7" class="control-label"></label>
+                <input asp-for="Day7" class="form-control" />
+                <span asp-validation-for="Day7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -46,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbGlzdFByb2ZpbGVULmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Admin/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Auth/loginAndRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxsb2dpbkFuZFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Home/aboutus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -146,8 +158,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Shared/_LayoutAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Shared/_LayoutHomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Shared/_LayoutTranier.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUcmFuaWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -194,6 +214,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Tranier/CreateNewPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmllclxDcmVhdGVOZXdQbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Tranier/listProfileMembar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmllclxsaXN0UHJvZmlsZU1lbWJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Tranier/SeeAllPlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmllclxTZWVBbGxQbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Tranier/UpdatePlan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbmllclxVcGRhdGVQbGFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Typepersons/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZXBlcnNvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -212,6 +248,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Typepersons/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZXBlcnNvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dHBsYW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dHBsYW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dHBsYW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dHBsYW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya291dHBsYW5zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/_ViewImports.cshtml]

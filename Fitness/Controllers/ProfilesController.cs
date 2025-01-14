@@ -145,12 +145,13 @@ namespace FitnessWebApplication1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname");
             return View(profile);
         }
 
         // GET: Profiles/Delete/5
        
-                public async Task<IActionResult> Delete(decimal? id)
+        public async Task<IActionResult> Delete(decimal? id)
         {
             if (id == null || _context.Profiles == null)
             {

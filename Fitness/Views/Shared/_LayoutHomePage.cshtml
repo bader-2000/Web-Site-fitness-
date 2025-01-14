@@ -70,10 +70,30 @@
 									<a class="dropbtn">Me <iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
 
 									<div class="dropdown-content" >
+											
+											@{
 
-											<a asp-action="Details" asp-controller="ProfileUser" asp-route-id="21" class="drop-item" style="color:#d4000d ; ">Profile </a>
-											<a href="blog.html" class="drop-item" style="color:#d4000d ; ">Setting </a>
-											<a href="" target="_blank" style="color:#d4000d ; ">LogIn</a>
+												var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID"));
+												var UserIsEnter =Context.Session.GetInt32("UserIsEnter");
+												var UserRoleID = Context.Session.GetInt32("UserRoleID");
+												
+
+												@if (UserIsEnter == 1 && UserID != null)
+												{
+													
+													<a asp-controller="ProfileUser" asp-action="Details" asp-route-id="@UserID" class="drop-item" style="color:#d4000d ; ">Profile</a>
+												<a asp-controller="Auth" asp-action="loginAndRegister" class="drop-item" style="color:#d4000d ; ">Logout</a>
+											}
+											else
+											{
+												
+												<a asp-action="loginAndRegister" asp-controller="Auth" target="_blank" style="color:#d4000d;">LogIn</a>
+												
+											}
+
+											}
+											
+ }     </p>
 										
 									</div>
 								</li>

@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    ViewData["Title"] = "Report";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Corona Admin</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/css/style.css">
+<link rel="shortcut icon" href="~/DesignAdman/assets/images/favicon.png" />
+
+
+
+<div class="content-wrapper bg-dark text-light">
+    <div class="main-panel">
+        <div class="col-12 grid-margin">
+            <div class="card bg-secondary text-light">
+                <div class="card-body">
+
+
+
+
+                    @section Scripts {
+                        @{
+                            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                        }
+                    }
+
+                    <script src="~/DesignAdman/assets/vendors/js/vendor.bundle.base.js"></script>
+                    <script src="~/DesignAdman/assets/vendors/chart.js/Chart.min.js"></script>
+                    <script src="~/DesignAdman/assets/vendors/progressbar.js/progressbar.min.js"></script>
+                    <script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+                    <script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+                    <script src="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+                    <script src="~/DesignAdman/assets/js/off-canvas.js"></script>
+                    <script src="~/DesignAdman/assets/js/hoverable-collapse.js"></script>
+                    <script src="~/DesignAdman/assets/js/misc.js"></script>
+                    <script src="~/DesignAdman/assets/js/settings.js"></script>
+                    <script src="~/DesignAdman/assets/js/todolist.js"></script>
+                    <script src="~/DesignAdman/assets/js/dashboard.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Fitness.Models.Workoutplan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numberofweek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Day7)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numberofweek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Goals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day7)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idwop">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idwop">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idwop">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

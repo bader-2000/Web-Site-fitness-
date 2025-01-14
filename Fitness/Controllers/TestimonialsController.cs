@@ -10,6 +10,7 @@ using Fitness.Models;
 
 namespace Fitness.Controllers
 {
+   
     public class TestimonialsController : Controller
     {
         private readonly ModelContext _context;
@@ -19,12 +20,142 @@ namespace Fitness.Controllers
             _context = context;
         }
 
+
         // GET: Testimonials
         public async Task<IActionResult> Index()
         {
             var modelContext = _context.Testimonials.Include(t => t.Tprofile);
             return View(await modelContext.ToListAsync());
         }
+
+
+        // Approve
+        [HttpPost]
+        [ActionName("Approve")]
+        public async Task<IActionResult> Approve(decimal id)
+        {
+            var testimonial = _context.Testimonials.FirstOrDefault(x => x.Testimoid == id);
+            if (testimonial == null)
+            {
+                return NotFound();
+            }
+
+            testimonial.Status = "Approved";
+            _context.Update(testimonial);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Testimonials");
+        }
+
+        // Reject
+        [HttpPost]
+        [ActionName("Reject")]
+        public async Task<IActionResult> Reject(decimal id)
+        {
+            var testimonial = _context.Testimonials.FirstOrDefault(x => x.Testimoid == id);
+            if (testimonial == null)
+            {
+                return NotFound();
+            }
+
+            testimonial.Status = "Rejected";
+            _context.Update(testimonial);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Testimonials");
+        }
+
+
+        //// Approved 
+        //// POST: Testimonials/Edit/5
+        //[ValidateAntiForgeryToken]
+        //[HttpPost, ActionName("Approved")]
+
+        //public async Task<IActionResult> Approved(decimal id )
+        //{
+
+        //    var trstumo = _context.Testimonials.FirstOrDefault(x =>x.Testimoid == id );
+
+
+        //    Testimonial testimonial = new Testimonial();
+
+        //    if (id != testimonial.Testimoid)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            testimonial.Status = "Approved";
+        //           _context.Update(testimonial);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!TestimonialExists(testimonial.Testimoid))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction("Index" , "Testimonials");
+        //    }
+
+        //    return View(testimonial);
+        //}
+
+
+        // Rejected
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[HttpPost, ActionName("Rejected")]
+        //public async Task<IActionResult> Rejected(decimal id)
+        //{
+
+        //    var trstumo = _context.Testimonials.FirstOrDefault(x => x.Testimoid == id);
+
+
+        //    Testimonial testimonial = new Testimonial();
+
+        //    if (id != testimonial.Testimoid)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            testimonial.Status = "Rejected";
+        //            _context.Update(testimonial);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!TestimonialExists(testimonial.Testimoid))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction("Index", "Testimonials");
+        //    }
+
+        //    return View(testimonial);
+        //}
+
+
+
+
+
 
         // GET: Testimonials/Details/5
         public async Task<IActionResult> Details(decimal? id)

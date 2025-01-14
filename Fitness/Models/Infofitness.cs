@@ -25,6 +25,7 @@ public partial class Infofitness
     [NotMapped]
     public virtual  IFormFile ImageFileaboutus { get; set; }
 
+   
     public decimal? Inprofileid { get; set; }
 
     public virtual Profile Inprofile { get; set; }

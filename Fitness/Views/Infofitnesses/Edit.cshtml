@@ -2,15 +2,138 @@
 
 @{
     ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Edit</h1>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Corona Admin</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/css/vendor.bundle.base.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+<link rel="stylesheet" href="~/DesignAdman/assets/css/style.css">
+<link rel="shortcut icon" href="~/DesignAdman/assets/images/favicon.png" />
+
+
+
+<div class="content-wrapper bg-dark text-light">
+    <div class="main-panel">
+        <div class="col-12 grid-margin">
+            <div class="card bg-secondary text-light">
+                <div class="card-body">
+
+
+                    <h1>Edit</h1>
 
 <h4>Infofitness</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit"  enctype="multipart/form-data">
+
+
+
+@using (Html.BeginForm("Edit", "Infofitnesses", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Idif" />
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Location" class="control-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Aboutus" class="control-label"></label>
+        <input asp-for="Aboutus" class="form-control" />
+        <span asp-validation-for="Aboutus" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Facebook" class="control-label"></label>
+        <input asp-for="Facebook" class="form-control" />
+        <span asp-validation-for="Facebook" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Linkedin" class="control-label"></label>
+        <input asp-for="Linkedin" class="form-control" />
+        <span asp-validation-for="Linkedin" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFileaboutus" class="control-label"></label>
+        <input asp-for="ImageFileaboutus" type="file" class="form-control" />
+        <span asp-validation-for="ImageFileaboutus" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Inprofileid" class="control-label"></label>
+        <select asp-for="Inprofileid" class="form-control" asp-items="ViewBag.Inprofileid"></select>
+        <span asp-validation-for="Inprofileid" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+}
+
+<a href="@Url.Action("Index", "Infofitnesses")" class="btn btn-secondary">Back to List</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       @*  <form asp-action="Edit"  enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Idif" />
             <div class="form-group">
@@ -31,32 +154,32 @@
             <div class="form-group">
                 <label asp-for="Aboutus" class="control-label"></label>
                 <input asp-for="Aboutus" class="form-control" />
-                <span asp-validation-for="Aboutus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Facebook" class="control-label"></label>
-                <input asp-for="Facebook" class="form-control" />
-                <span asp-validation-for="Facebook" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Linkedin" class="control-label"></label>
-                <input asp-for="Linkedin" class="form-control" />
-                <span asp-validation-for="Linkedin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImageFileaboutus" class="control-label"></label>
-                <input asp-for="ImageFileaboutus" class="form-control" />
-                <span asp-validation-for="ImageFileaboutus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Inprofileid" class="control-label"></label>
-                <select asp-for="Inprofileid" class="form-control" asp-items="ViewBag.Inprofileid"></select>
-                <span asp-validation-for="Inprofileid" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+                                    <span asp-validation-for="Aboutus" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Facebook" class="control-label"></label>
+                                    <input asp-for="Facebook" class="form-control" />
+                                    <span asp-validation-for="Facebook" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Linkedin" class="control-label"></label>
+                                    <input asp-for="Linkedin" class="form-control" />
+                                    <span asp-validation-for="Linkedin" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ImageFileaboutus" class="control-label"></label>
+                                    <input asp-for="ImageFileaboutus" class="form-control" />
+                                    <span asp-validation-for="ImageFileaboutus" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Inprofileid" class="control-label"></label>
+                                    <select asp-for="Inprofileid" class="form-control" asp-items="ViewBag.Inprofileid"></select>
+                                    <span asp-validation-for="Inprofileid" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form> *@
     </div>
 </div>
 
@@ -67,3 +190,20 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script src="~/DesignAdman/assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="~/DesignAdman/assets/vendors/chart.js/Chart.min.js"></script>
+<script src="~/DesignAdman/assets/vendors/progressbar.js/progressbar.min.js"></script>
+<script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+<script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+<script src="~/DesignAdman/assets/js/off-canvas.js"></script>
+<script src="~/DesignAdman/assets/js/hoverable-collapse.js"></script>
+<script src="~/DesignAdman/assets/js/misc.js"></script>
+<script src="~/DesignAdman/assets/js/settings.js"></script>
+<script src="~/DesignAdman/assets/js/todolist.js"></script>
+<script src="~/DesignAdman/assets/js/dashboard.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>

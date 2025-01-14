@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Fitness.Models.Profile>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutTranier.cshtml";
+}
+
+
+
+<link rel="stylesheet" href="~/css/TrenarTableMember.css">
+
+
+<div class="content-wrapper" style="margin-top:100px">
+    <div class="row">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-12 text-center py-5" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 20px;">
+                    <h1 style="font-size: 3rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
+                        Welcome to Manage Fitness
+                    </h1>
+                    <p style="font-size: 1.2rem; font-weight: 300; margin-top: 10px; color: #f0f0f0;">
+                        Your ultimate destination for achieving fitness goals and staying healthy!
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="card-title text-center" style="font-size: 2rem; font-weight: bold;">Member</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date of Birth</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@Url.Content("~/images/" + item.Photo)" class="rounded-circle" width="50" height="50" alt="my photo" />
+                                    <span class="pl-2">@item.Name @item.Lname</span>
+                                </td>
+                                <td>@Html.DisplayFor(modelitem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelitem => item.DateOfBirth)</td>
+                                <td>@Html.DisplayFor(modelitem => item.Role.Rname)</td>
+                                <td>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* 
+<div class="content-wrapper" style="margin-top:100px">
+    <div class="row">
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-12 text-center py-5" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
+                    <h1 style="font-size: 3rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
+                        Welcome to Manage Fitness
+                    </h1>
+                    <p style="font-size: 1.2rem; font-weight: 300; margin-top: 10px; color: #f0f0f0;">
+                        Your ultimate destination for achieving fitness goals and staying healthy!
+                    </p>
+                </div>
+            </div>
+            <h4 class="card-title">Member</h4>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date of Birth</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@Url.Content("~/images/" + item.Photo)" class="rounded-circle" width="50" height="50" alt="my photo" />
+                                    <span class="pl-2">@item.Name @item.Lname</span>
+                                </td>
+                                <td>@Html.DisplayFor(modelitem => item.Email)</td>
+                                <td>@Html.DisplayFor(modelitem => item.DateOfBirth)</td>
+                                <td>@Html.DisplayFor(modelitem => item.Role.Rname)</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+ *@

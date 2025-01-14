@@ -7,15 +7,18 @@ namespace Fitness.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+		
+		public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
+			ViewBag.UserIsEnter = null;
+		}
 
         public IActionResult Index()
         {
-            return View();
+			
+			if (ViewBag.UserIsEnter == null ){ ViewBag.UserIsEnter = false; }
+			return View();
         }
 
         public IActionResult aboutus()
