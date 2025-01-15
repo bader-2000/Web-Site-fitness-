@@ -17,107 +17,96 @@
     }
 }
 
-
+  <link rel="stylesheet" href="~/DesignProfileUser/editProfile.css" /> 
 
 
 <link href="~/DesignProfileUser/style.css" rel="stylesheet" id="bootstrap-css">
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<div class="container emp-profile">
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="profile-img" style="border-radius:30%;">
-                <img src="@Url.Content("~/images/" + Model?.Photo)" style="border-radius:20%;" width="100" height="100" alt="my photo" />
+<div class="content-wrapper" style="margin-top: 50px;">
+    <div class="container emp-profile">
+        
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="profile-img">
+                    <img src="@Url.Content("~/images/" + Model?.Photo)" class="img-fluid rounded-circle" width="150" height="150" alt="User Photo" />
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="profile-head">
+                    <h5>
+                        @Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Lname)
+                    </h5>
+                    <h6>
+                        @Html.DisplayFor(model => model.Username)
+                    </h6>
+                   
+                </div>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="profile-head">
-                <h5>
-                    @Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Lname)
-                </h5>
-                <h6>
-                    @Html.DisplayNameFor(model => model.Username)
-                    @Html.DisplayFor(model => model.Username)
-                </h6>
-                <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Edit Your Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab-content profile-tab" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Profileid" />
 
-                    <form asp-action="Edit" enctype="multipart/form-data">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="Profileid" />
-
+               
+                    <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" style="width: 50%;" />
+                            <label asp-for="Name" class="control-label">First Name</label>
+                            <input asp-for="Name" class="form-control" />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="Lname" class="control-label"></label>
-                            <input asp-for="Lname" class="form-control" style="width: 50%;" />
+                            <label asp-for="Lname" class="control-label">Last Name</label>
+                            <input asp-for="Lname" class="form-control" />
                             <span asp-validation-for="Lname" class="text-danger"></span>
                         </div>
+                    </div>
 
+                    <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="Email" class="control-label"></label>
-                            <input asp-for="Email" class="form-control" style="width: 50%;" />
+                            <label asp-for="Email" class="control-label">Email</label>
+                            <input asp-for="Email" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="Username" class="control-label"></label>
-                            <input asp-for="Username" class="form-control" style="width: 50%;" />
+                            <label asp-for="Username" class="control-label">Username</label>
+                            <input asp-for="Username" class="form-control" />
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
+                    </div>
 
+                    <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="Userpassword" class="control-label"></label>
-                            <input asp-for="Userpassword" class="form-control" style="width: 50%;" />
+                            <label asp-for="Userpassword" class="control-label">Password</label>
+                            <input asp-for="Userpassword" type="password" class="form-control" />
                             <span asp-validation-for="Userpassword" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="ImageFile" class="control-label"></label>
-                            <input asp-for="ImageFile" class="form-control" style="width: 50%;" />
+                            <label asp-for="ImageFile" class="control-label">Profile Picture</label>
+                            <input asp-for="ImageFile" type="file" class="form-control-file" />
                             <span asp-validation-for="ImageFile" class="text-danger"></span>
                         </div>
+                    </div>
 
+                    <div class="form-row">
                         <div class="form-group">
-                            <label asp-for="DateOfBirth" class="control-label"></label>
-                            <input asp-for="DateOfBirth" class="form-control" style="width: 50%;" />
+                            <label asp-for="DateOfBirth" class="control-label">Date of Birth</label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" />
                             <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <input type="submit" value="Save" class="btn btn-primary" />
-                            <a asp-controller="ProfileUser" asp-action="Details" asp-route-id="@Model?.Profileid"
-                               class="btn btn-secondary"
-                               style="border-radius: 1.5rem; width: 70%; padding: 2%; font-weight: 600; color: wheat; background-color: black;">
-                                Back
-                            </a>
-                      
-                        </div>
-
-                    </form>
-
-                </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a asp-controller="ProfileUser" asp-action="Details" asp-route-id="@Model?.Profileid" class="btn btn-secondary ml-2">Back</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-
 </div>

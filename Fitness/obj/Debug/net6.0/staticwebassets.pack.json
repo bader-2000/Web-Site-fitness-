@@ -4049,8 +4049,12 @@
       "PackagePath": "staticwebassets\\DesignHomePage\\superfish\\js\\supersubs.js"
     },
     {
-      "Id": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\style.css",
-      "PackagePath": "staticwebassets\\DesignProfileUser\\style.css"
+      "Id": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\ditelsProfile.css",
+      "PackagePath": "staticwebassets\\DesignProfileUser\\ditelsProfile.css"
+    },
+    {
+      "Id": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\editProfile.css",
+      "PackagePath": "staticwebassets\\DesignProfileUser\\editProfile.css"
     },
     {
       "Id": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\css\\LoginandRegestred.css",

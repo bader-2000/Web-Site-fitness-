@@ -8,14 +8,15 @@ namespace Fitness.Controllers
     {
 
         private readonly ModelContext _context;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        public TrainerController(ModelContext context, IWebHostEnvironment webHostEnvironment)
+
+        public TrainerController(ModelContext context)
         {
             _context = context;
-            _webHostEnvironment = webHostEnvironment;
+      
         }
-        
 
+
+      
         public async Task<IActionResult> listProfileMembar()
         {
             var modelContext = _context.Profiles
@@ -23,19 +24,19 @@ namespace Fitness.Controllers
                 .Where(p => p.Role.Roleid == 3);
             return View(await modelContext.ToListAsync());
         }
-        // GET: Workoutplans
-        public async Task<IActionResult> SeeAllPlan()
-        {
-            return _context.Workoutplans != null ?
-                        View(await _context.Workoutplans.ToListAsync()) :
-                        Problem("Entity set 'ModelContext.Workoutplans'  is null.");
-        }
+     
+            // GET: Workoutplans
+            public async Task<IActionResult> SeeAllPlan()
+            {
+                return _context.Workoutplans != null ?
+                            View(await _context.Workoutplans.ToListAsync()) :
+                            Problem("Entity set 'ModelContext.Workoutplans'  is null.");
+            }
 
 
 
-
-        // GET: Workoutplans/Create 
-        public IActionResult CreateNewPlan()
+            // GET: Workoutplans/Create 
+            public IActionResult CreateNewPlan()
         {
             return View();
         }

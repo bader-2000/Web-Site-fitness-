@@ -30,7 +30,6 @@ namespace Fitness.Controllers
 
 
 
-
         public IActionResult login([Bind("Username,Userpassword")] Profile profile)
         {
             // التأكد من أن المدخلات ليست فارغة
@@ -43,19 +42,20 @@ namespace Fitness.Controllers
             var authuperson = _context.Profiles
                 .Where(x => x.Username.ToLower() == profile.Username.ToLower() && x.Userpassword == profile.Userpassword)
                 .SingleOrDefault();
+            var Rname = _context.Roles.Where(x=>x.Roleid == authuperson.Roleid).SingleOrDefault();
 
             if (authuperson != null)
             {
                 try
                 {
-                    // إعداد البيانات في الجلسة
-                    HttpContext.Session.SetString("UserPhoto", authuperson.Photo ?? "/path/to/default/photo.jpg"); // تعيين صورة افتراضية إذا كانت null
+                  
+                    HttpContext.Session.SetString("UserPhoto", authuperson.Photo ?? "default_photo.png"); 
                     HttpContext.Session.SetString("UserNameandLastname", $"{authuperson.Name} {authuperson.Lname}");
-                    HttpContext.Session.SetString("UserRoleName", authuperson.Role?.Rname );
+                    HttpContext.Session.SetString("UserRoleName", Rname.Rname ?? "Unknown Role");
                     HttpContext.Session.SetInt32("UserID", (int)authuperson.Profileid);
                     HttpContext.Session.SetInt32("UserRoleID", (int)authuperson.Roleid);
 
-                    // تحديد الصفحة التي سيتم إعادة توجيه المستخدم إليها بناءً على دوره
+                    
                     HttpContext.Session.SetInt32("UserIsEnter", 1);
 
                     switch (authuperson.Roleid)
@@ -81,7 +81,7 @@ namespace Fitness.Controllers
                 }
             }
 
-            // إذا لم يتم العثور على المستخدم
+            
             ViewBag.ErrorMessage = "User Name or Password is not correct.";
             return View("loginAndRegister");
         }

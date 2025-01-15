@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cQdXd+3IrWL4xd8zwd5v3F7Y9Ce0osryhOUw8BrnUW8=",
+  "Hash": "jBF5iecOMWJlxJTJaa8W96quJy4VXWTLXIQFGfsoHKM=",
   "Source": "Fitness",
   "BasePath": "_content/Fitness",
   "Mode": "Default",
@@ -19340,12 +19340,12 @@
       "OriginalItemSpec": "wwwroot\\DesignHomePage\\superfish\\js\\supersubs.js"
     },
     {
-      "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\style.css",
+      "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\ditelsProfile.css",
       "SourceId": "Fitness",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\",
       "BasePath": "_content/Fitness",
-      "RelativePath": "DesignProfileUser/style.css",
+      "RelativePath": "DesignProfileUser/ditelsProfile.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -19356,7 +19356,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\DesignProfileUser\\style.css"
+      "OriginalItemSpec": "wwwroot\\DesignProfileUser\\ditelsProfile.css"
+    },
+    {
+      "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\DesignProfileUser\\editProfile.css",
+      "SourceId": "Fitness",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\",
+      "BasePath": "_content/Fitness",
+      "RelativePath": "DesignProfileUser/editProfile.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\DesignProfileUser\\editProfile.css"
     },
     {
       "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\favicon.ico",

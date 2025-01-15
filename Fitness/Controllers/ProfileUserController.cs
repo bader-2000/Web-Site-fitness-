@@ -23,7 +23,7 @@ namespace Fitness.Controllers
             return View(profiles);
         }
 
-        public async Task<IActionResult> Details(decimal? id)
+        public async Task<IActionResult> Details(decimal? id = 1)
         {
             if (id == null || _context.Profiles == null)
             {
@@ -43,7 +43,7 @@ namespace Fitness.Controllers
         }
 
    
-        public async Task<IActionResult> Edit(decimal? id)
+        public async Task<IActionResult> Edit(decimal? id = 1)
         {
             if (id == null || _context.Profiles == null)
             {

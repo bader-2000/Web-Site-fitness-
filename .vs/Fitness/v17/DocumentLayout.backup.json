@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\admin\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\admin\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\profileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\profileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\fitness.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\fitness.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\profileuser\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\profileuser\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Fitness",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Fitness.csproj",
-              "RelativeDocumentMoniker": "Fitness\\Fitness.csproj",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Fitness.csproj",
-              "RelativeToolTip": "Fitness\\Fitness.csproj",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-15T04:29:44.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Report.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Admin\\Report.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Admin\\Report.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Admin\\Report.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Admin\\Report.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T02:16:30.57Z",
+              "Title": "ProfileUserController.cs",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\ProfileUserController.cs",
+              "RelativeDocumentMoniker": "Fitness\\Controllers\\ProfileUserController.cs",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\ProfileUserController.cs",
+              "RelativeToolTip": "Fitness\\Controllers\\ProfileUserController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAcwEMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T15:09:50.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Fitness\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Fitness\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAAiwDsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T02:16:41.659Z",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Fitness\\Views\\profileuser\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\Edit.cshtml",
+              "RelativeToolTip": "Fitness\\Views\\profileuser\\Edit.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAUwGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T15:06:24.499Z",
               "EditorCaption": ""
             },
             {
