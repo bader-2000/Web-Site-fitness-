@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SlUlZ7ikg0Q=",
+  "dgSpecHash": "/69lnH2OIHU=",
   "success": true,
   "projectFilePath": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Fitness.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\qk-21\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\qk-21\\.nuget\\packages\\jszip\\3.10.1\\jszip.3.10.1.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -133,6 +134,7 @@
     "C:\\Users\\qk-21\\.nuget\\packages\\odp.netcore\\2.0.12\\odp.netcore.2.0.12.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\oracle.entityframeworkcore\\7.21.9\\oracle.entityframeworkcore.7.21.9.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.90\\oracle.manageddataaccess.core.3.21.90.nupkg.sha512",
+    "C:\\Users\\qk-21\\.nuget\\packages\\pdfmake\\0.1.18\\pdfmake.0.1.18.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\qk-21\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

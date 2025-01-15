@@ -5,18 +5,10 @@
 
 }
 
- @*  <link rel="stylesheet" href="~/DesignAuth/style.css">  *@
+<link rel="stylesheet" href="~/css/LoginandRegestred.css">
 
 <style>
-    .error-msg{
-        margin-bottom: 15px;
-        padding: 10px;
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-        border-radius: 5px;
-        text-align: center;
-    }
+    
 </style>
 <div class="container">
     <section id="formHolder">
@@ -39,7 +31,7 @@
             <!-- Form Box -->
             <div class="col-sm-6 form">
                 <!-- Signup Form -->
-                <div class="signup form-peice">
+              <div class="signup form-peice">
                     <form method="post" asp-action="Register" asp-controller="Auth" class="signup-form" enctype="multipart/form-data">
 
                         <div class="form-group">
@@ -90,10 +82,9 @@
                             <a href="#login" class="switch">I have an account</a>
                         </div>
                     </form>
-                </div>
+                </div> 
 
-                <!-- Login Form -->
-                <div class="login form-peice">
+                <<div class="login form-peice">
                     <form asp-action="login" asp-controller="Auth" class="login-form" method="post">
                         <div class="form-group">
                             <label asp-for="Username">User Name</label>
@@ -117,12 +108,13 @@
                             <input type="submit" value="Login">
                             <a href="#" class="switch">I'm New</a>
                         </div>
+
                         <div class="CTA">
-                            <a asp-action="index" asp-controller="Home" >Are you Guest</a> 
+                            <a asp-action="index" asp-controller="Home">Are you Guest</a>
                         </div>
                     </form>
                 </div>
-            </div>
+
         </div>
     </section>
    

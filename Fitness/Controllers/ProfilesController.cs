@@ -49,7 +49,7 @@ namespace FitnessWebApplication1.Controllers
         // GET: Profiles/Create
         public IActionResult Create()
         {
-            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname");
+             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Rname");
             return View();
         }
 
@@ -77,7 +77,7 @@ namespace FitnessWebApplication1.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid); // إعادة تعبئة القائمة
+            ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid); // إعادة تعبئة القائمة
             return View(profile);
         }
 
@@ -96,7 +96,7 @@ namespace FitnessWebApplication1.Controllers
             {
                 return NotFound();
             }
-            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
+             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
             return View(profile);
         }
 
@@ -145,7 +145,7 @@ namespace FitnessWebApplication1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname");
+             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid); // إعادة تعبئة القائمة
             return View(profile);
         }
 
@@ -249,7 +249,7 @@ namespace FitnessWebApplication1.Controllers
 //        // GET: Profiles/Create
 //        public IActionResult Create()
 //        {
-//            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Roleid");
+//             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Roleid");
 //            return View();
 //        }
 
@@ -266,7 +266,7 @@ namespace FitnessWebApplication1.Controllers
 //                await _context.SaveChangesAsync();
 //                return RedirectToAction(nameof(Index));
 //            }
-//            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
+//             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
 //            return View(profile);
 //        }
 
@@ -283,7 +283,7 @@ namespace FitnessWebApplication1.Controllers
 //            {
 //                return NotFound();
 //            }
-//            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
+//             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
 //            return View(profile);
 //        }
 
@@ -319,7 +319,7 @@ namespace FitnessWebApplication1.Controllers
 //                }
 //                return RedirectToAction(nameof(Index));
 //            }
-//            ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
+//             ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Roleid", profile.Roleid);
 //            return View(profile);
 //        }
 

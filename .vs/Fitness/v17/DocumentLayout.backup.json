@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\tranier\\listprofilemembar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\tranier\\listprofilemembar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\admin\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\admin\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\tranier\\seeallplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\tranier\\seeallplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\fitness.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\fitness.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\wwwroot\\css\\trenartablemember.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\wwwroot\\css\\trenartablemember.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\tranier\\updateplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\tranier\\updateplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\shared\\_layouttranier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\shared\\_layouttranier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\traniercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\traniercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\tranier\\createnewplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\tranier\\createnewplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,84 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fitness",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Fitness.csproj",
+              "RelativeDocumentMoniker": "Fitness\\Fitness.csproj",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Fitness.csproj",
+              "RelativeToolTip": "Fitness\\Fitness.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-15T04:29:44.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "listProfileMembar.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\listProfileMembar.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Tranier\\listProfileMembar.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\listProfileMembar.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Tranier\\listProfileMembar.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwDwAAAAAAAAAAAAAAA==",
+              "Title": "Report.cshtml",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Admin\\Report.cshtml",
+              "RelativeDocumentMoniker": "Fitness\\Views\\Admin\\Report.cshtml",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Admin\\Report.cshtml",
+              "RelativeToolTip": "Fitness\\Views\\Admin\\Report.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T21:26:28.724Z",
+              "WhenOpened": "2025-01-15T02:16:30.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TrenarTableMember.css",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\css\\TrenarTableMember.css",
-              "RelativeDocumentMoniker": "Fitness\\wwwroot\\css\\TrenarTableMember.css",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\css\\TrenarTableMember.css",
-              "RelativeToolTip": "Fitness\\wwwroot\\css\\TrenarTableMember.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-01-14T21:21:08.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdatePlan.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\UpdatePlan.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Tranier\\UpdatePlan.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\UpdatePlan.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Tranier\\UpdatePlan.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFAAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T20:57:00.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SeeAllPlan.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\SeeAllPlan.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Tranier\\SeeAllPlan.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\SeeAllPlan.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Tranier\\SeeAllPlan.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T17:31:24.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateNewPlan.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\CreateNewPlan.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Tranier\\CreateNewPlan.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Tranier\\CreateNewPlan.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Tranier\\CreateNewPlan.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T17:20:56.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TranierController.cs",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\TranierController.cs",
-              "RelativeDocumentMoniker": "Fitness\\Controllers\\TranierController.cs",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\TranierController.cs",
-              "RelativeToolTip": "Fitness\\Controllers\\TranierController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAiAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Fitness\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Fitness\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAADQBAAAAAAAAAAAiwDsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T16:21:10.68Z",
+              "WhenOpened": "2025-01-15T02:16:41.659Z",
               "EditorCaption": ""
             },
             {
@@ -133,19 +78,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LayoutTranier.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Shared\\_LayoutTranier.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Shared\\_LayoutTranier.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Shared\\_LayoutTranier.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Shared\\_LayoutTranier.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T16:18:18.934Z",
-              "EditorCaption": ""
             }
           ]
         }

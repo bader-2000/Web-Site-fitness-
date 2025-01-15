@@ -640,6 +640,9 @@
           }
         }
       },
+      "JSZip/3.10.1": {
+        "type": "package"
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -2196,6 +2199,9 @@
         "runtime": {
           "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {}
         }
+      },
+      "pdfmake/0.1.18": {
+        "type": "package"
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
@@ -4903,6 +4909,21 @@
         "logo.png"
       ]
     },
+    "JSZip/3.10.1": {
+      "sha512": "cUcauCkT7OOLjgaUVNQhCiNxOuRD8sm68H7bkPi++4QJaYGomY8y//bm/acIlupV2MZu+7gGpKuibw2dIT9REg==",
+      "type": "package",
+      "path": "jszip/3.10.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/jszip.js",
+        "content/Scripts/jszip.min.js",
+        "jszip.3.10.1.nupkg.sha512",
+        "jszip.nuspec",
+        "nuget.exe",
+        "nupkg-make.bat"
+      ]
+    },
     "MessagePack/2.1.152": {
       "sha512": "PlJ31qf42uGuJfwc61x/Pt4hJi01xh1rrBofj1MJSLzEot/2UAIRdSgxEHN/8qou5CV8OBeDM9HXKPi1Oj8rpQ==",
       "type": "package",
@@ -7114,6 +7135,19 @@
         "oracle.manageddataaccess.core.3.21.90.nupkg.sha512",
         "oracle.manageddataaccess.core.nuspec",
         "readme.txt"
+      ]
+    },
+    "pdfmake/0.1.18": {
+      "sha512": "Oewm9jZIHLJj8DaISRCDInkOsT2orzoF+AGc+0RoMWzNssSsgMogc2bBXu63BNJMHs3Ch7jiJSLDkw6igJ87tw==",
+      "type": "package",
+      "path": "pdfmake/0.1.18",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/pdfmake/pdfmake.min.js",
+        "content/Scripts/pdfmake/vfs_fonts.js",
+        "pdfmake.0.1.18.nupkg.sha512",
+        "pdfmake.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -11436,13 +11470,15 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "JSZip >= 3.10.1",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.35",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.18",
       "ODP.NetCore >= 2.0.12",
-      "Oracle.EntityFrameworkCore >= 7.21.9"
+      "Oracle.EntityFrameworkCore >= 7.21.9",
+      "pdfmake >= 0.1.18"
     ]
   },
   "packageFolders": {
@@ -11495,6 +11531,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "JSZip": {
+            "target": "Package",
+            "version": "[3.10.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.5, )"
@@ -11524,6 +11564,10 @@
           "Oracle.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.21.9, )"
+          },
+          "pdfmake": {
+            "target": "Package",
+            "version": "[0.1.18, )"
           }
         },
         "imports": [

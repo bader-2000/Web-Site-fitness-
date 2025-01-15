@@ -4,9 +4,13 @@
     ViewData["Title"] = "Details";
     var UserRoleID = Context.Session.GetInt32("UserRoleID"); 
 
-    if (UserRoleID.HasValue && (UserRoleID == 1 || UserRoleID == 2))
+    if (UserRoleID.HasValue && (UserRoleID == 1))
     {
         Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else if (UserRoleID.HasValue && (UserRoleID == 2))
+    {
+        Layout = "~/Views/Shared/_LayoutTrainer.cshtml";
     }
     else
     {

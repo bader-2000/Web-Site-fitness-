@@ -26,33 +26,47 @@ namespace Fitness.Controllers
             return View();
         }
 
+
+
+
+
+
         public IActionResult login([Bind("Username,Userpassword")] Profile profile)
         {
-           
+            // التأكد من أن المدخلات ليست فارغة
+            if (string.IsNullOrEmpty(profile.Username) || string.IsNullOrEmpty(profile.Userpassword))
+            {
+                ViewBag.ErrorMessage = "Username or Password cannot be empty.";
+                return View("loginAndRegister");
+            }
 
-                var authuperson = _context.Profiles.Where(x => x.Username == profile.Username && x.Userpassword == profile.Userpassword).SingleOrDefault();
-
+            var authuperson = _context.Profiles
+                .Where(x => x.Username.ToLower() == profile.Username.ToLower() && x.Userpassword == profile.Userpassword)
+                .SingleOrDefault();
 
             if (authuperson != null)
             {
                 try
                 {
-                    HttpContext.Session.SetInt32("UserID",(Int32)authuperson.Profileid);
-                    HttpContext.Session.SetInt32("UserRoleID",(Int32)authuperson.Roleid);
+                    // إعداد البيانات في الجلسة
+                    HttpContext.Session.SetString("UserPhoto", authuperson.Photo ?? "/path/to/default/photo.jpg"); // تعيين صورة افتراضية إذا كانت null
+                    HttpContext.Session.SetString("UserNameandLastname", $"{authuperson.Name} {authuperson.Lname}");
+                    HttpContext.Session.SetString("UserRoleName", authuperson.Role?.Rname );
+                    HttpContext.Session.SetInt32("UserID", (int)authuperson.Profileid);
+                    HttpContext.Session.SetInt32("UserRoleID", (int)authuperson.Roleid);
+
+                    // تحديد الصفحة التي سيتم إعادة توجيه المستخدم إليها بناءً على دوره
+                    HttpContext.Session.SetInt32("UserIsEnter", 1);
+
                     switch (authuperson.Roleid)
                     {
                         case 1:
-
-                            HttpContext.Session.SetInt32("UserIsEnter", 1);
-
                             return RedirectToAction("Index", "Admin");
 
                         case 2:
-                            HttpContext.Session.SetInt32("UserIsEnter", 1);
-                            return RedirectToAction("Index", "Tranier");
+                            return RedirectToAction("listProfileMembar", "Trainer");
 
                         case 3:
-                            HttpContext.Session.SetInt32("UserIsEnter", 1);
                             return RedirectToAction("Index", "Home");
 
                         default:
@@ -62,14 +76,66 @@ namespace Fitness.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ViewBag.ErrorMessage = ex.Message;
-                    ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
+                    ViewBag.ErrorMessage = $"An error occurred: {ex.Message}";
+                    return View("loginAndRegister");
                 }
-            }   
-         
-			ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
-            return RedirectToAction("loginAndRegister");
+            }
+
+            // إذا لم يتم العثور على المستخدم
+            ViewBag.ErrorMessage = "User Name or Password is not correct.";
+            return View("loginAndRegister");
         }
+
+
+
+        //     public IActionResult login([Bind("Username,Userpassword")] Profile profile)
+        //     {
+
+
+        //             var authuperson = _context.Profiles.Where(x => x.Username == profile.Username && x.Userpassword == profile.Userpassword).SingleOrDefault();
+
+
+        //         if (authuperson != null)
+        //         {
+        //             try
+        //             {
+        //            // إعداد البيانات في الجلسة
+        //            HttpContext.Session.SetString("UserPhoto", authuperson.Photo);
+        //            HttpContext.Session.SetString("UserNameandLastname", authuperson.Name + " " + authuperson.Lname);
+        //            HttpContext.Session.SetString("UserRoleName", authuperson.Role.Rname);
+        //            HttpContext.Session.SetInt32("UserID",(Int32)authuperson.Profileid);
+        //                 HttpContext.Session.SetInt32("UserRoleID",(Int32)authuperson.Roleid);
+        //                 switch (authuperson.Roleid)
+        //                 {
+        //                     case 1:
+
+        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
+
+        //                         return RedirectToAction("Index", "Admin");
+
+        //                     case 2:
+        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
+        //                         return RedirectToAction("listProfileMembar", "Trainer");
+
+        //                     case 3:
+        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
+        //                         return RedirectToAction("Index", "Home");
+
+        //                     default:
+        //                         ViewBag.UserIsEnter = false;
+        //                         return RedirectToAction("Index", "Home");
+        //                 }
+        //             }
+        //             catch (Exception ex)
+        //             {
+        //                 ViewBag.ErrorMessage = ex.Message;
+        //                 ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
+        //             }
+        //         }   
+
+        //ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
+        //         return RedirectToAction("loginAndRegister");
+        //     }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -26,6 +26,8 @@ namespace Fitness.Controllers
         }
         public IActionResult Index(decimal? id)
         {
+
+            
             var lastRegesterd= _context.Profiles.Max(x => x.Profileid);
              
             ViewBag.numberofRegistered = _context.Profiles.Count();
@@ -108,38 +110,38 @@ namespace Fitness.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Search(DateTime? StartDate, DateTime? EndDate)
         {
-            // إذا كانت كلا التواريخ فارغة
+           
             if (StartDate == null && EndDate == null)
             {
                 var data = await _context.Typepeople
-                    .Include(t => t.Tsubscr)  // تأكد من تضمين Tsubscr إذا كانت مرتبطة بـ Typeperson
-                    .ToListAsync(); // إرجاع جميع السجلات
+                    .Include(t => t.Tsubscr) 
+                    .ToListAsync(); 
                 return View(data);
             }
 
-            // إذا كانت StartDate فارغة فقط
+           
             if (StartDate == null)
             {
                 var data = await _context.Typepeople
-                    .Include(t => t.Tsubscr)  // تأكد من تضمين Tsubscr
-                    .Where(d => d.Enddate <= EndDate) // تصفية بناءً على EndDate فقط
+                    .Include(t => t.Tsubscr)
+                    .Where(d => d.Enddate <= EndDate) 
                     .ToListAsync();
                 return View(data);
             }
 
-            // إذا كانت EndDate فارغة فقط
+            
             if (EndDate == null)
             {
                 var data = await _context.Typepeople
-                    .Include(t => t.Tsubscr)  // تأكد من تضمين Tsubscr
-                    .Where(d => d.Startdate >= StartDate) // تصفية بناءً على StartDate فقط
+                    .Include(t => t.Tsubscr) 
+                    .Where(d => d.Startdate >= StartDate)
                     .ToListAsync();
                 return View(data);
             }
 
-            // إذا كانت كلا التواريخ غير فارغة
+           
             var filteredData = await _context.Typepeople
-                .Include(t => t.Tsubscr)  // تأكد من تضمين Tsubscr
+                .Include(t => t.Tsubscr)  
                 .Where(d => d.Startdate >= StartDate && d.Enddate <= EndDate)
                 .ToListAsync();
 
@@ -272,25 +274,63 @@ namespace Fitness.Controllers
 
 
 
-        // GET: Profiles/Details/5
-        public async Task<IActionResult> report(decimal? id)
+
+
+        [HttpPost]
+        public IActionResult Report(DateTime? StartDate, DateTime? EndDate, string subscriptionType)
         {
-            if (id == null || _context.Profiles == null)
+            var subscriptions = _context.Subscriptions.Include(s => s.Typepeople).ToList();
+            var multiTable = from s in subscriptions
+                             from tp in s.Typepeople
+                             select new
+                             {
+                                 Subscription = s,
+                                 Typeperson = tp
+                             };
+
+            var filteredData = multiTable.AsQueryable();
+
+            if (StartDate != null && EndDate != null)
             {
-                return NotFound();
+                filteredData = filteredData.Where(x => x.Typeperson.Startdate >= StartDate && x.Typeperson.Enddate <= EndDate);
+            }
+            else if (StartDate != null)
+            {
+                filteredData = filteredData.Where(x => x.Typeperson.Startdate >= StartDate);
+            }
+            else if (EndDate != null)
+            {
+                filteredData = filteredData.Where(x => x.Typeperson.Enddate <= EndDate);
             }
 
-            var profile = await _context.Profiles
-                .Include(p => p.Role)
-                .FirstOrDefaultAsync(m => m.Profileid == id);
-            if (profile == null)
+            if (!string.IsNullOrEmpty(subscriptionType))
             {
-                return NotFound();
+                filteredData = filteredData.Where(x => x.Subscription.Nameplan == subscriptionType);
             }
 
-            return View(profile);
+            ViewBag.TotalQuantity = filteredData.Sum(x => x.Subscription.Countweeks ?? 0);
+            ViewBag.TotalPrice = filteredData.Sum(x => x.Subscription.Price ?? 0);
+
+            return View(filteredData.ToList());
         }
 
+        [HttpGet]
+        public IActionResult Report()
+        {
+            // في حالة عدم وجود تواريخ مدخلة أو نوع اشتراك، يتم استرجاع كل البيانات
+            var subscriptions = _context.Subscriptions.Include(s => s.Typepeople).ToList();
+            var typepeople = _context.Typepeople.Include(t => t.Tsubscr).Include(t => t.Tprofile).ToList();
+
+            var multiTable = from s in subscriptions
+                             from tp in s.Typepeople // استخدام Typepeople هنا لأنه يحتوي على البيانات المرتبطة بـ Subscription
+                             select new
+                             {
+                                 Subscription = s,
+                                 Typeperson = tp
+                             };
+
+            return View(multiTable.ToList());
+        }
 
         // POST: Profiles/Delete/5
         [HttpPost, ActionName("Delete")]

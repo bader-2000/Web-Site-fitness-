@@ -8,13 +8,15 @@
     ".NETCoreApp,Version=v6.0": {
       "Fitness/1.0.0": {
         "dependencies": {
+          "JSZip": "3.10.1",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.35",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.18",
           "ODP.NetCore": "2.0.12",
-          "Oracle.EntityFrameworkCore": "7.21.9"
+          "Oracle.EntityFrameworkCore": "7.21.9",
+          "pdfmake": "0.1.18"
         },
         "runtime": {
           "Fitness.dll": {}
@@ -594,6 +596,7 @@
           }
         }
       },
+      "JSZip/3.10.1": {},
       "MessagePack/2.1.152": {
         "dependencies": {
           "MessagePack.Annotations": "2.1.152",
@@ -1772,6 +1775,7 @@
           }
         }
       },
+      "pdfmake/0.1.18": {},
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -3248,6 +3252,13 @@
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
     },
+    "JSZip/3.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cUcauCkT7OOLjgaUVNQhCiNxOuRD8sm68H7bkPi++4QJaYGomY8y//bm/acIlupV2MZu+7gGpKuibw2dIT9REg==",
+      "path": "jszip/3.10.1",
+      "hashPath": "jszip.3.10.1.nupkg.sha512"
+    },
     "MessagePack/2.1.152": {
       "type": "package",
       "serviceable": true,
@@ -3786,6 +3797,13 @@
       "sha512": "sha512-q1k7i9Im9GPFJzBz9w0sLRlN0MBTWHaAAdanTiHVlpMfVQ/JiKRb5uDVv8bplsMfn2S74WJAXbzwzou/6yb9kg==",
       "path": "oracle.manageddataaccess.core/3.21.90",
       "hashPath": "oracle.manageddataaccess.core.3.21.90.nupkg.sha512"
+    },
+    "pdfmake/0.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Oewm9jZIHLJj8DaISRCDInkOsT2orzoF+AGc+0RoMWzNssSsgMogc2bBXu63BNJMHs3Ch7jiJSLDkw6igJ87tw==",
+      "path": "pdfmake/0.1.18",
+      "hashPath": "pdfmake.0.1.18.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

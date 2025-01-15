@@ -1,57 +1,207 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@* @ @model Tuple<IEnumerable<JoinTables>, IEnumerable<Subscription>>
+ *@
 
+ @{
     ViewData["Title"] = "Report";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Corona Admin</title>
-<!-- plugins:css -->
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/css/vendor.bundle.base.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/flag-icon-css/css/flag-icon.min.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
-<link rel="stylesheet" href="~/DesignAdman/assets/css/style.css">
-<link rel="shortcut icon" href="~/DesignAdman/assets/images/favicon.png" />
-
-
-
-<div class="content-wrapper bg-dark text-light">
+<div class="content-wrapper">
     <div class="main-panel">
         <div class="col-12 grid-margin">
-            <div class="card bg-secondary text-light">
+            <div class="card">
                 <div class="card-body">
+                    <h4 class="card-title">Report for Subscriptions</h4>
+                    <div class="table-responsive">
 
+                        <!-- Search Form -->
+                        <div class="container">
+                            <form method="post" class="mb-4" asp-action="Report">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="StartDate">Start Date:</label>
+                                        <input type="date" name="StartDate" class="form-control" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="EndDate">End Date:</label>
+                                        <input type="date" name="EndDate" class="form-control" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="subscriptionType">Subscription Type:</label>
+                                        <select name="subscriptionType" class="form-control">
+                                            <option value="">All</option>
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="Annual">Annual</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 align-self-end d-flex justify-content-between">
+                                        <button type="submit" class="btn btn-primary mt-2">Filter</button>
+                                        <div class="ml-2">
+                                            <button id="exportExcel" class="btn btn-success mt-2">Export to Excel</button>
+                                            <button id="exportPDF" class="btn btn-danger mt-2">Export to PDF</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
 
+                            <!-- Subscription Table -->
+                            <table id="subscriptionsTable" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Price</th>
+                                        <th>Weeks Count</th>
+                                        <th>Plan Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Typeperson.Startdate?.ToString("yyyy-MM-dd")</td>
+                                            <td>@item.Typeperson.Enddate?.ToString("yyyy-MM-dd")</td>
+                                            <td>@item.Subscription.Price</td>
+                                            <td>@item.Subscription.Countweeks</td>
+                                            <td>@item.Subscription.Nameplan</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
 
+                            <!-- Total Quantity and Price -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Total Quantity: @ViewBag.TotalQuantity</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Total Price: @ViewBag.TotalPrice</h5>
+                                </div>
+                            </div>
 
-                    @section Scripts {
-                        @{
-                            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+    <!-- DataTables and export buttons -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.1.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.1.1/js/buttons.html5.min.js"></script>
+
+    <!-- DataTables Initialization -->
+    <script>
+        $(document).ready(function () {
+            $('#subscriptionsTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excelHtml5',
+                    'pdfHtml5'
+                ]
+            });
+        });
+    </script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            var ctx = document.getElementById('subscriptionChart').getContext('2d');
+            var subscriptionChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Total Quantity', 'Total Price'],
+                    datasets: [{
+                        label: 'Subscription Data',
+                        data: [@ViewBag.TotalQuantity, @ViewBag.TotalPrice],
+                        backgroundColor: ['#FF5733', '#33FF57'],
+                        borderColor: ['#FF5733', '#33FF57'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
                         }
                     }
+                }
+            });
+        });
+    </script>
 
-                    <script src="~/DesignAdman/assets/vendors/js/vendor.bundle.base.js"></script>
-                    <script src="~/DesignAdman/assets/vendors/chart.js/Chart.min.js"></script>
-                    <script src="~/DesignAdman/assets/vendors/progressbar.js/progressbar.min.js"></script>
-                    <script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-                    <script src="~/DesignAdman/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-                    <script src="~/DesignAdman/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-                    <script src="~/DesignAdman/assets/js/off-canvas.js"></script>
-                    <script src="~/DesignAdman/assets/js/hoverable-collapse.js"></script>
-                    <script src="~/DesignAdman/assets/js/misc.js"></script>
-                    <script src="~/DesignAdman/assets/js/settings.js"></script>
-                    <script src="~/DesignAdman/assets/js/todolist.js"></script>
-                    <script src="~/DesignAdman/assets/js/dashboard.js"></script>
-                </div>
-            </div>
-        </div>
+</div>
+
+@* 
+     <!-- DataTables Initialization -->
+     <script>
+         $(document).ready(function () {
+             $('#subscriptionsTable').DataTable({
+                 dom: 'Bfrtip',
+                 buttons: [
+                     {
+                         extend: 'excelHtml5',
+                         text: 'Export to Excel',
+                         className: 'btn btn-success'
+                     },
+                     {
+                         extend: 'pdfHtml5',
+                         text: 'Export to PDF',
+                         className: 'btn btn-danger'
+                     }
+                 ]
+             });
+         });
+     </script> *@
+
+</div>
+
+@* <div class="content-wrapper">
+    <div class="main-panel">
+        <div class="col-12 grid-margin">
+              <script>
+
+                // Create the chart using Chart.js
+                var ctx = document.getElementById('subscriptionChart').getContext('2d');
+                var subscriptionChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Total Quantity', 'Total Price'],
+                        datasets: [{
+                            label: 'Subscription Data',
+                            data: [@ViewBag.TotalQuantity, @ViewBag.TotalPrice],
+                            backgroundColor: ['#FF5733', '#33FF57'],
+                            borderColor: ['#FF5733', '#33FF57'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+           </script>
+        </div>  
     </div>
+</div> *@
+
+
+<script src="~/libs/xlsx.full.min.js"></script>
+<script src="~/libs/jszip.min.js"></script>
+<script src="~/libs/pdfmake.min.js"></script>
