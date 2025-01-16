@@ -1,11 +1,10 @@
-﻿
-using Fitness.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fitness.Models;
+
 public partial class Profile
 {
     public decimal Profileid { get; set; }
@@ -17,7 +16,6 @@ public partial class Profile
     public string Userpassword { get; set; } = null!;
 
     public string? Photo { get; set; }
-
     [DataType(DataType.Date)]
     public DateTime? DateOfBirth { get; set; }
 
@@ -26,12 +24,11 @@ public partial class Profile
     public string? Lname { get; set; }
 
     public decimal? Roleid { get; set; }
-
-
     [NotMapped]
     public virtual IFormFile ImageFile { get; set; }
-
     public virtual ICollection<Infofitness> Infofitnesses { get; set; } = new List<Infofitness>();
+
+    public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
     public virtual Role? Role { get; set; }
 

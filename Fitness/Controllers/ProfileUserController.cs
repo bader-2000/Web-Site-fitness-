@@ -17,6 +17,8 @@ namespace Fitness.Controllers
 			_context = context;
             _webHostEnvironment = webHostEnvironment;
 		}
+        
+        
         public IActionResult Index()
         {
             var profiles = _context.Profiles.Include(p => p.Role).ToList();
@@ -60,6 +62,9 @@ namespace Fitness.Controllers
             ViewData["Roleid"] = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid);
             return View(profile);
         }
+
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

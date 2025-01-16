@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Fitness.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace  Fitness.Models;
+namespace Fitness.Models;
 
 public partial class ModelContext : DbContext
 {
@@ -17,6 +16,8 @@ public partial class ModelContext : DbContext
     }
 
     public virtual DbSet<Infofitness> Infofitnesses { get; set; }
+
+    public virtual DbSet<Payment> Payments { get; set; }
 
     public virtual DbSet<Profile> Profiles { get; set; }
 
@@ -51,7 +52,7 @@ public partial class ModelContext : DbContext
                 .HasColumnType("NUMBER")
                 .HasColumnName("IDIF");
             entity.Property(e => e.Aboutus)
-                .HasMaxLength(300)
+                .HasMaxLength(500)
                 .IsUnicode(false)
                 .HasColumnName("ABOUTUS");
             entity.Property(e => e.Email)
@@ -86,6 +87,42 @@ public partial class ModelContext : DbContext
                 .HasForeignKey(d => d.Inprofileid)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("FK_INFO");
+        });
+
+        modelBuilder.Entity<Payment>(entity =>
+        {
+            entity.HasKey(e => e.Paymentid).HasName("SYS_C008462");
+
+            entity.ToTable("PAYMENT");
+
+            entity.Property(e => e.Paymentid)
+                .ValueGeneratedOnAdd()
+                .HasColumnType("NUMBER")
+                .HasColumnName("PAYMENTID");
+            entity.Property(e => e.Amount)
+                .HasColumnType("NUMBER(18,2)")
+                .HasColumnName("AMOUNT");
+            entity.Property(e => e.Cardholdername)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("CARDHOLDERNAME");
+            entity.Property(e => e.Cardnumber)
+                .HasPrecision(16)
+                .HasColumnName("CARDNUMBER");
+            entity.Property(e => e.Expirydate)
+                .HasColumnType("DATE")
+                .HasColumnName("EXPIRYDATE");
+            entity.Property(e => e.Paymentdate)
+                .HasDefaultValueSql("SYSDATE ")
+                .HasColumnType("DATE")
+                .HasColumnName("PAYMENTDATE");
+            entity.Property(e => e.Profileid)
+                .HasColumnType("NUMBER(38)")
+                .HasColumnName("PROFILEID");
+
+            entity.HasOne(d => d.Profile).WithMany(p => p.Payments)
+                .HasForeignKey(d => d.Profileid)
+                .HasConstraintName("FK_PROFILE_PAYMENT");
         });
 
         modelBuilder.Entity<Profile>(entity =>
@@ -168,8 +205,8 @@ public partial class ModelContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("NAMEPLAN");
             entity.Property(e => e.Price)
-                 .HasColumnType("NUMBER")
-                 .HasColumnName("PRICE");
+                .HasColumnType("NUMBER")
+                .HasColumnName("PRICE");
             entity.Property(e => e.Sidwop)
                 .HasColumnType("NUMBER")
                 .HasColumnName("SIDWOP");

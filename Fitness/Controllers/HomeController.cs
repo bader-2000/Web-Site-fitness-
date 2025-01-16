@@ -1,5 +1,6 @@
 ﻿using Fitness.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Fitness.Controllers
@@ -7,18 +8,26 @@ namespace Fitness.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-		
-		public HomeController(ILogger<HomeController> logger)
+
+
+        private readonly ModelContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public HomeController(ILogger<HomeController> logger ,ModelContext context, IWebHostEnvironment webHostEnvironment)
         {
             _logger = logger;
 			ViewBag.UserIsEnter = null;
-		}
+            _context = context;
+            _webHostEnvironment = webHostEnvironment;
+        }
 
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-			
-			if (ViewBag.UserIsEnter == null ){ ViewBag.UserIsEnter = false; }
-			return View();
+            
+            var infowebsite = await _context.Infofitnesses.FirstOrDefaultAsync();
+
+           
+            return View(infowebsite);
         }
 
         public IActionResult aboutus()
@@ -42,7 +51,12 @@ namespace Fitness.Controllers
 			return View();
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult payment()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

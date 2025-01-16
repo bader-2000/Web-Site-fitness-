@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jBF5iecOMWJlxJTJaa8W96quJy4VXWTLXIQFGfsoHKM=",
+  "Hash": "ap1C74IdOHIfdVYzkHRrfwaAEg+67lIinXn1a++2s9U=",
   "Source": "Fitness",
   "BasePath": "_content/Fitness",
   "Mode": "Default",
@@ -20269,6 +20269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\c932cc36-dbc8-4ee4-9749-450a180af36e_bad.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\images\\c957a733-ad7c-4384-86ed-33e0da9ad4df_bad.jpg",
+      "SourceId": "Fitness",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\",
+      "BasePath": "_content/Fitness",
+      "RelativePath": "images/c957a733-ad7c-4384-86ed-33e0da9ad4df_bad.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c957a733-ad7c-4384-86ed-33e0da9ad4df_bad.jpg"
     },
     {
       "Identity": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\wwwroot\\images\\c9a2dd72-53f4-4c38-ad35-08495387c469_bad.jpg",
