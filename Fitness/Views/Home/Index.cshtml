@@ -322,82 +322,100 @@
  		<h2 class="section-title text-center mb-4">Membership</h2>
  		<div class="container">
  			<div class="row">
- 				<div class="flex-container">
- 					<div class="membership-box mb-3">
- 						<div class="heading-box">
- 							<h3>standard</h3>
- 						</div>
- 						<div class="text-content">
- 							<div class="inclusion">
- 								<ul class="list-unstyled colored-alto">
- 									<li><i class="icon icon-check"></i>Includes Membership</li>
- 									<li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
- 									<li><i class="icon icon-close"></i>Diet Plan Included</li>
- 									<li><i class="icon icon-check"></i>Health and Fitness Tips</li>
- 									<li><i class="icon icon-close"></i>Monday-Friday Gym Access</li>
- 									<li><i class="icon icon-check"></i>Full Access To Everything</li>
- 									<li><i class="icon icon-close"></i>No Additional Amenities</li>
- 								</ul>
- 							</div><!--inclusion-->
- 							<div class="meta-price">
- 								<p><sup>$</sup><strong>30</strong><em>/month</em></p>
- 							</div>
- 							<div class="pix_btn">
- 								<a href="#" class="hvr-shutter-in-horizontal mt-3">Buy Now</a>
- 							</div>
- 						</div><!--text-content-->
- 					</div><!--membership-box-->
+                <div class="flex-container">
+                    <!-- Membership Standard -->
+                    <div class="membership-box mb-3">
+                        <div class="heading-box">
+                            <h3>Standard</h3>
+                        </div>
+                        <div class="text-content">
+                            <div class="inclusion">
+                                <ul class="list-unstyled colored-alto">
+                                    <li><i class="icon icon-check"></i>Includes Membership</li>
+                                    <li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
+                                    <li><i class="icon icon-close"></i>Diet Plan Included</li>
+                                    <li><i class="icon icon-check"></i>Health and Fitness Tips</li>
+                                    <li><i class="icon icon-close"></i>Monday-Friday Gym Access</li>
+                                    <li><i class="icon icon-check"></i>Full Access To Everything</li>
+                                    <li><i class="icon icon-close"></i>No Additional Amenities</li>
+                                </ul>
+                            </div><!--inclusion-->
+                            <div class="meta-price">
+                                <p><sup>$</sup><strong>30</strong><em>/month</em></p>
+                            </div>
+                            <div class="pix_btn">
+                                <form method="post" asp-controller="UserPayment" asp-action="choooseMembership">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="NamePlan" value="Standard" />
+                                    <input type="hidden" name="Price" value="30" />
+                                    <button type="submit" class="hvr-shutter-in-horizontal mt-3">Buy Now</button>
+                                </form>
+                            </div>
+                        </div><!--text-content-->
+                    </div><!--membership-box-->
+                    <!-- Membership Ultimate -->
+                    <div class="membership-box mb-3">
+                        <div class="heading-box">
+                            <h3>Ultimate</h3>
+                        </div>
+                        <div class="text-content">
+                            <div class="inclusion">
+                                <ul class="list-unstyled colored-alto">
+                                    <li><i class="icon icon-check"></i>Includes Membership</li>
+                                    <li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
+                                    <li><i class="icon icon-check"></i>Diet Plan Included</li>
+                                    <li><i class="icon icon-check"></i>Health and Fitness Tips</li>
+                                    <li><i class="icon icon-check"></i>Monday-Friday Gym Access</li>
+                                    <li><i class="icon icon-check"></i>Full Access To Everything</li>
+                                    <li><i class="icon icon-check"></i>No Additional Amenities</li>
+                                </ul>
+                            </div><!--inclusion-->
+                            <div class="meta-price">
+                                <p><sup>$</sup><strong>45</strong><em>/month</em></p>
+                            </div>
+                            <div class="pix_btn">
+                                <form method="post" asp-controller="UserPayment" asp-action="choooseMembership">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="NamePlan" value="Ultimate" />
+                                    <input type="hidden" name="Price" value="45" />
+                                    <button type="submit" class="hvr-shutter-in-horizontal mt-3">Buy Now</button>
+                                </form>
+                            </div>
+                        </div><!--text-content-->
+                    </div><!--membership-box-->
+                    <!-- Membership Professional -->
+                    <div class="membership-box mb-3">
+                        <div class="heading-box">
+                            <h3>Professional</h3>
+                        </div>
+                        <div class="text-content">
+                            <div class="inclusion">
+                                <ul class="list-unstyled colored-alto">
+                                    <li><i class="icon icon-check"></i>Includes Membership</li>
+                                    <li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
+                                    <li><i class="icon icon-check"></i>Diet Plan Included</li>
+                                    <li><i class="icon icon-check"></i>Health and Fitness Tips</li>
+                                    <li><i class="icon icon-check"></i>Monday-Friday Gym Access</li>
+                                    <li><i class="icon icon-check"></i>Full Access To Everything</li>
+                                    <li><i class="icon icon-check"></i>No Additional Amenities</li>
+                                </ul>
+                            </div><!--inclusion-->
+                            <div class="meta-price">
+                                <p><sup>$</sup><strong>60</strong><em>/month</em></p>
+                            </div>
+                            <div class="pix_btn">
+                                <form method="post" asp-controller="UserPayment" asp-action="choooseMembership">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="NamePlan" value="Professional" />
+                                    <input type="hidden" name="Price" value="60" />
+                                    <button type="submit" class="hvr-shutter-in-horizontal mt-3">Buy Now</button>
+                                </form>
+                            </div>
+                        </div><!--text-content-->
+                    </div><!--membership-box-->
+                </div><!--flex-container-->
 
- 					<div class="membership-box mb-3">
- 						<div class="heading-box">
- 							<h3>ultimate</h3>
- 						</div>
- 						<div class="text-content">
- 							<div class="inclusion">
- 								<ul class="list-unstyled colored-alto">
- 									<li><i class="icon icon-check"></i>Includes Membership</li>
- 									<li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
- 									<li><i class="icon icon-check"></i>Diet Plan Included</li>
- 									<li><i class="icon icon-check"></i>Health and Fitness Tips</li>
- 									<li><i class="icon icon-check"></i>Monday-Friday Gym Access</li>
- 									<li><i class="icon icon-check"></i>Full Access To Everything</li>
- 									<li><i class="icon icon-check"></i>No Additional Amenities</li>
- 								</ul>
- 							</div><!--inclusion-->
- 							<div class="meta-price">
- 								<p><sup>$</sup><strong>45</strong><em>/month</em></p>
- 							</div>
- 							<div class="pix_btn">
- 								<a href="#" class="hvr-shutter-in-horizontal mt-3">Buy Now</a>
- 							</div>
- 						</div><!--text-content-->
- 					</div><!--membership-box-->
 
- 					<div class="membership-box mb-3">
- 						<div class="heading-box">
- 							<h3>professional</h3>
- 						</div>
- 						<div class="text-content">
- 							<div class="inclusion">
- 								<ul class="list-unstyled colored-alto">
- 									<li><i class="icon icon-check"></i>Includes Membership</li>
- 									<li><i class="icon icon-check"></i>Access To All Gym Facilities</li>
- 									<li><i class="icon icon-check"></i>Diet Plan Included</li>
- 									<li><i class="icon icon-check"></i>Health and Fitness Tips</li>
- 									<li><i class="icon icon-check"></i>Monday-Friday Gym Access</li>
- 									<li><i class="icon icon-check"></i>Full Access To Everything</li>
- 									<li><i class="icon icon-check"></i>No Additional Amenities</li>
- 								</ul>
- 							</div><!--inclusion-->
- 							<div class="meta-price">
- 								<p><sup>$</sup><strong>60</strong><em>/month</em></p>
- 							</div>
- 							<div class="pix_btn">
- 								<a href="#" class="hvr-shutter-in-horizontal mt-3">Buy Now</a>
- 							</div>
- 						</div><!--text-content-->
- 					</div><!--membership-box-->
- 				</div><!--col-md-12-->
  			</div>
  		</div>
  	</div><!--membership-wrapper-->

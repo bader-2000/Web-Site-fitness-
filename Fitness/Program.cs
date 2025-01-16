@@ -2,6 +2,7 @@
 using Fitness.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using static Fitness.Controllers.UserPaymentController;
 
 namespace Fitness
 {
@@ -13,6 +14,9 @@ namespace Fitness
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //builder.Services.AddSingleton<EmailService>();
+            //builder.Services.AddSingleton<PdfService>();
+
             builder.Services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(60);
             });
@@ -34,9 +38,11 @@ namespace Fitness
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-		
-			//builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
-			app.UseHttpsRedirection();
+
+            //builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();
             app.UseRouting();

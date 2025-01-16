@@ -102,6 +102,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb2ZpdG5lc3Nlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Payments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Payments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Payments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Payments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Payments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Profiles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -248,6 +268,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Typepersons/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZXBlcnNvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/UserPayment/AddVisaCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBheW1lbnRcQWRkVmlzYUNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/UserPayment/AddVisaCardisFind.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBheW1lbnRcQWRkVmlzYUNhcmRpc0ZpbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/UserPayment/ChooseWQplan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclBheW1lbnRcQ2hvb3NlV1FwbGFuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/qk-21/Desktop/Frist Project (fitness)/Fitness/Fitness/Views/Workoutplans/Create.cshtml]

@@ -18,6 +18,18 @@ C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Humanizer.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.barcodes.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.bouncy-castle-connector.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.forms.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.io.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.kernel.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.layout.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.pdfa.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.pdfua.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.sign.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.styledxmlparser.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.svg.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\itext.commons.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\MessagePack.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\MessagePack.Annotations.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -34,6 +46,7 @@ C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
+C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\qk-21\Desktop\Frist Project (fitness)\Fitness\Fitness\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll

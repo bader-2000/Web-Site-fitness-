@@ -1,0 +1,151 @@
+﻿@* @model  Fitness.Models.Payment 
+
+@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+
+<style>
+    body {
+        background-color: #000; /* Black background */
+        color: #ccc; /* Light gray text */
+        font-family: Arial, sans-serif;
+    }
+
+    .payment-page .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #333; /* Dark gray card background */
+        color: #fff; /* White text inside the card */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Light shadow */
+    }
+
+    .payment-page h2 {
+        text-align: center;
+        color: #fff; /* White heading */
+        margin-bottom: 20px;
+    }
+
+    .payment-page .form-group {
+        margin-bottom: 20px; /* Spacing between fields */
+    }
+
+        .payment-page .form-group label {
+            font-size: 1rem;
+            color: #ccc; /* Light gray label text */
+        }
+
+        .payment-page .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #555; /* Dark gray border */
+            border-radius: 5px;
+            background-color: #222; /* Darker gray input background */
+            color: #fff; /* White input text */
+        }
+
+            .payment-page .form-group input:focus {
+                border-color: #007bff; /* Blue focus border */
+                outline: none;
+            }
+
+    .payment-page .btn-submit,
+    .payment-page .btn-cancel {
+        width: 100%; /* Full-width buttons */
+        padding: 12px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .payment-page .btn-submit {
+        background-color: #28a745; /* Green submit button */
+        color: #fff;
+    }
+
+        .payment-page .btn-submit:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+    .payment-page .btn-cancel {
+        background-color: #dc3545; /* Red cancel button */
+        color: #fff;
+    }
+
+        .payment-page .btn-cancel:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+
+    .payment-page .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #777;
+    }
+</style>
+
+<div class="payment-page">
+    <div class="container">
+        <h2>Enter Visa Card Details</h2>
+    <form asp-action="CompletePayment" method="post">
+    <!-- Card Number -->
+    <div class="form-group">
+        <label asp-for="Cardnumber">Card Number</label>
+         <input type="text" asp-for="Cardnumber" placeholder="XXXX XXXX XXXX XXXX" required />
+         <span asp-validation-for="Cardnumber" class="text-danger"></span>
+    </div>
+
+    <!-- Expiry Date -->
+    <div class="form-group">
+        <label asp-for="Expirydate">Expiry Date</label>
+         <input type="text" Expirydate placeholder="MM/YY" required />
+         <span asp-validation-for="Expirydate" class="text-danger"></span>
+    </div>
+
+    <!-- CVV -->
+    <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="CVV" placeholder="XXX" required />
+        
+    </div>
+
+    <!-- Card Holder Name -->
+    <div class="form-group">
+        <label asp-for="Cardholdername">Cardholder Name</label>
+        <input type="text" asp-for="Cardholdername" placeholder="Name as on the card" required />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <!-- Amount -->
+    <div class="form-group">
+        <label asp-for="Amount">Amount</label>
+        <input type="number" asp-for="Amount" value="$@ViewBag.Price" readonly required />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+   
+
+    <!-- Payment Date -->
+    <div class="form-group">
+        <label asp-for="Paymentdate">Payment Date</label>
+         <input type="date" asp-for="Paymentdate" value="@DateTime.Now.ToString("yyyy-MM-dd")" required />
+         <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn-submit">Complete Payment</button>
+
+    <!-- Cancel Button -->
+    <a href="/" class="btn-cancel">Cancel</a>
+</form>
+    </div>
+
+    <div class="footer">
+        <p>All rights reserved &copy; 2025</p>
+    </div>
+</div>
+ *@

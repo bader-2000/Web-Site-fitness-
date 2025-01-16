@@ -1,0 +1,151 @@
+﻿@model IEnumerable<Fitness.Models.Workoutplan>
+
+@{
+    ViewData["Title"] = "Index";
+    // Layout = "~/Views/Shared/_LayoutTrainer.cshtml";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+<style>
+    .page-title {
+        text-align: center;
+        color: #fff;
+        font-size: 2.5rem;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .content-wrapper {
+        margin-top: 100px;
+        background-color: #000;
+    }
+
+    .card {
+        background-color: #333;
+        color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    .btn-cancel {
+        background-color: #dc3545;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .col-md-4 {
+        margin-bottom: 30px;
+    }
+
+    .top-btn {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bottom-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="content-wrapper">
+        <h1 class="page-title">Schedules</h1>
+
+        <div class="row">
+            <div class="card-body">
+                <div class="container mt-4">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plan Count week : @item.Numberofweek</h5>
+                                        <p class="card-text">Goals : @item.Goals</p>
+                                        <p class="card-text">Exercise Day 1 : @item.Day1</p>
+                                        <p class="card-text">Exercise Day 2 : @item.Day2</p>
+                                        <p class="card-text">Exercise Day 3 : @item.Day3</p>
+                                        <p class="card-text">Exercise Day 4 : @item.Day4</p>
+                                        <p class="card-text">Exercise Day 5 : @item.Day5</p>
+                                        <p class="card-text">Exercise Day 6 : @item.Day6</p>
+                                        <p class="card-text">Exercise Day 7 : @item.Day7</p>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <form asp-action="ChooseWQplan"  method="post" style="display:inline;">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="Idwop" value="@item.Idwop" />
+                                            <button type="submit" class="btn btn-success btn-sm">To Choose</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="bottom-btn">
+            <a href="/" class="btn btn-cancel btn-sm">Cancel</a>
+        </div>
+    </div>
+</body>
