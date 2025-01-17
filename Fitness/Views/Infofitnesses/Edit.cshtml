@@ -20,172 +20,97 @@
 <link rel="shortcut icon" href="~/DesignAdman/assets/images/favicon.png" />
 
 
+<link rel="stylesheet" href="~/css/ManageStaticPagesEdit.css" />
+
 
 <div class="content-wrapper bg-dark text-light">
     <div class="main-panel">
         <div class="col-12 grid-margin">
             <div class="card bg-secondary text-light">
                 <div class="card-body">
+                    <h1 class="card-title text-center">Edit Infofitness</h1>
+                    <hr class="border-secondary">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @using (Html.BeginForm("Edit", "Infofitnesses", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.AntiForgeryToken()
 
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <h1>Edit</h1>
+                                <input type="hidden" asp-for="Idif" />
 
-<h4>Infofitness</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+                                <!-- Email Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Email" class="control-label text-light">Email</label>
+                                    <input asp-for="Email" class="form-control custom-field" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
 
+                                <!-- Phone Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Phone" class="control-label text-light">Phone</label>
+                                    <input asp-for="Phone" class="form-control custom-field" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
 
+                                <!-- Location Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Location" class="control-label text-light">Location</label>
+                                    <input asp-for="Location" class="form-control custom-field" />
+                                    <span asp-validation-for="Location" class="text-danger"></span>
+                                </div>
 
-@using (Html.BeginForm("Edit", "Infofitnesses", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
-
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    <input type="hidden" asp-for="Idif" />
-
-    <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Phone" class="control-label"></label>
-        <input asp-for="Phone" class="form-control" />
-        <span asp-validation-for="Phone" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Location" class="control-label"></label>
-        <input asp-for="Location" class="form-control" />
-        <span asp-validation-for="Location" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Aboutus" class="control-label"></label>
-        <input asp-for="Aboutus" class="form-control" />
-        <span asp-validation-for="Aboutus" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Facebook" class="control-label"></label>
-        <input asp-for="Facebook" class="form-control" />
-        <span asp-validation-for="Facebook" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Linkedin" class="control-label"></label>
-        <input asp-for="Linkedin" class="form-control" />
-        <span asp-validation-for="Linkedin" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="ImageFileaboutus" class="control-label"></label>
-        <input asp-for="ImageFileaboutus" type="file" class="form-control" />
-        <span asp-validation-for="ImageFileaboutus" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Inprofileid" class="control-label"></label>
-        <select asp-for="Inprofileid" class="form-control" asp-items="ViewBag.Inprofileid"></select>
-        <span asp-validation-for="Inprofileid" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-primary" />
-    </div>
-}
-
-<a href="@Url.Action("Index", "Infofitnesses")" class="btn btn-secondary">Back to List</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       @*  <form asp-action="Edit"  enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Idif" />
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Location" class="control-label"></label>
-                <input asp-for="Location" class="form-control" />
-                <span asp-validation-for="Location" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Aboutus" class="control-label"></label>
-                <input asp-for="Aboutus" class="form-control" />
+                                <!-- About Us Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Aboutus" class="control-label text-light">About Us</label>
+                                    <textarea asp-for="Aboutus" class="form-control custom-field" rows="4"></textarea>
                                     <span asp-validation-for="Aboutus" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Facebook" class="control-label"></label>
-                                    <input asp-for="Facebook" class="form-control" />
+
+                                <!-- Facebook Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Facebook" class="control-label text-light">Facebook</label>
+                                    <input asp-for="Facebook" class="form-control custom-field" />
                                     <span asp-validation-for="Facebook" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Linkedin" class="control-label"></label>
-                                    <input asp-for="Linkedin" class="form-control" />
+
+                                <!-- LinkedIn Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Linkedin" class="control-label text-light">LinkedIn</label>
+                                    <input asp-for="Linkedin" class="form-control custom-field" />
                                     <span asp-validation-for="Linkedin" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="ImageFileaboutus" class="control-label"></label>
-                                    <input asp-for="ImageFileaboutus" class="form-control" />
+
+                                <!-- Image Upload Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="ImageFileaboutus" class="control-label text-light">Upload Image</label>
+                                    <input asp-for="ImageFileaboutus" type="file" class="form-control custom-field" />
                                     <span asp-validation-for="ImageFileaboutus" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Inprofileid" class="control-label"></label>
-                                    <select asp-for="Inprofileid" class="form-control" asp-items="ViewBag.Inprofileid"></select>
+
+                                <!-- Profile Select Field -->
+                                <div class="form-group mb-4">
+                                    <label asp-for="Inprofileid" class="control-label text-light">Profile</label>
+                                    <select asp-for="Inprofileid" class="form-control custom-field" asp-items="ViewBag.Inprofileid"></select>
                                     <span asp-validation-for="Inprofileid" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Save" class="btn btn-primary" />
+
+                                <!-- Buttons -->
+                                <div class="form-group text-center">
+                                    <input type="submit" value="Save" class="btn btn-primary btn-lg" />
+                                    <a href="@Url.Action("Index", "Infofitnesses")" class="btn btn-secondary btn-lg">Back to List</a>
                                 </div>
-                            </form> *@
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
@@ -203,7 +128,4 @@
 <script src="~/DesignAdman/assets/js/settings.js"></script>
 <script src="~/DesignAdman/assets/js/todolist.js"></script>
 <script src="~/DesignAdman/assets/js/dashboard.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
+      

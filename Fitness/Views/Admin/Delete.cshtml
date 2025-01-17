@@ -82,7 +82,11 @@
             <form asp-action="Delete">
                 <input type="hidden" asp-for="Profileid" />
                 <button type="submit" class="btn btn-danger">Delete</button>
-                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                @{
+                    var actionName = (Model.Role.Roleid == 2) ? "listProfileT" : "listProfileM";
+                }
+                <a asp-action="@actionName" class="btn btn-secondary">Back to List</a>
+
             </form>
         </div>
     </div>

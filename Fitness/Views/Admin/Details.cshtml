@@ -79,7 +79,11 @@
         </div>
         <div class="card-footer">
             <a asp-action="Edit" asp-route-id="@Model.Profileid" class="btn btn-primary">Edit</a>
-            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            @{
+                var actionName = (Model.Role.Roleid == 2) ? "listProfileT" : "listProfileM";
+            }
+            <a asp-action="@actionName" class="btn btn-secondary">Back to List</a>
+            
         </div>
     </div>
 </div>

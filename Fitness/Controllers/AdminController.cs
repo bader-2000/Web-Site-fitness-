@@ -175,8 +175,8 @@ namespace Fitness.Controllers
                 return (profile.Roleid == 2) ? RedirectToAction("listProfileT") : RedirectToAction("listProfileM");
             }
 
-            ViewBag.Roleid = new SelectList(_context.Roles.Where(r => r.Roleid == 2 || r.Roleid == 3), "Roleid", "Rname", profile.Roleid); 
-            return View(profile);
+            ViewBag.Roleid = new SelectList(_context.Roles.Where(r => r.Roleid == 2 || r.Roleid == 3), "Roleid", "Rname", profile.Roleid);
+            return  (profile.Roleid == 2) ? RedirectToAction("listProfileT") : RedirectToAction("listProfileM"); ;
         }
 
 
@@ -195,8 +195,8 @@ namespace Fitness.Controllers
                 return NotFound();
             }
 
-            
-            ViewBag.Roleid = new SelectList(_context.Roles, "Roleid", "Rname", profile.Roleid);
+
+            ViewBag.Roleid = new SelectList(_context.Roles.Where(r => r.Roleid == 2 || r.Roleid == 3), "Roleid", "Rname");
             return View(profile);
         }
 
@@ -247,10 +247,10 @@ namespace Fitness.Controllers
                 return  (profile.Roleid == 2) ? RedirectToAction("listProfileT") : RedirectToAction("listProfileM");
             }
            
-            ViewBag.Roleid = new SelectList(_context.Roles.Where(r => r.Roleid == 2 || r.Roleid == 3), "Roleid", "Rname", profile.Roleid);
+           
+            ViewBag.Roleid = new SelectList(_context.Roles.Where(r => r.Roleid == 2 || r.Roleid == 3), "Roleid", "Rname");
             return View(profile);
         }
-
 
         // GET: Profiles/Delete/5
 
@@ -317,12 +317,12 @@ namespace Fitness.Controllers
         [HttpGet]
         public IActionResult Report()
         {
-            // في حالة عدم وجود تواريخ مدخلة أو نوع اشتراك، يتم استرجاع كل البيانات
+            
             var subscriptions = _context.Subscriptions.Include(s => s.Typepeople).ToList();
             var typepeople = _context.Typepeople.Include(t => t.Tsubscr).Include(t => t.Tprofile).ToList();
 
             var multiTable = from s in subscriptions
-                             from tp in s.Typepeople // استخدام Typepeople هنا لأنه يحتوي على البيانات المرتبطة بـ Subscription
+                             from tp in s.Typepeople 
                              select new
                              {
                                  Subscription = s,
@@ -354,19 +354,19 @@ namespace Fitness.Controllers
 
         public IActionResult OnGet()
         {
-            // استرجاع البيانات من قاعدة البيانات
+            
             var chartData = _context.Typepeople
-                .Where(tp => tp.Startdate.HasValue) // التأكد من وجود تاريخ البداية
-                .GroupBy(tp => tp.Startdate.Value.Month) // تجميع البيانات حسب الشهر
+                .Where(tp => tp.Startdate.HasValue) 
+                .GroupBy(tp => tp.Startdate.Value.Month) 
                 .Select(g => new
                 {
                     Month = g.Key,
-                    Subscriptions = g.Count() // عدد الاشتراكات في كل شهر
+                    Subscriptions = g.Count() 
                 })
                 .OrderBy(d => d.Month)
                 .ToList();
 
-            // تمرير البيانات إلى View باستخدام ViewData
+            
             ViewData["ChartData"] = JsonConvert.SerializeObject(chartData);
 
             return View();

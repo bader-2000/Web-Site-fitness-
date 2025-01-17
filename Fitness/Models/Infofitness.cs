@@ -28,5 +28,5 @@ public partial class Infofitness
    
     public decimal? Inprofileid { get; set; }
 
-    public virtual Profile Inprofile { get; set; }
+    public virtual Profile ?Inprofile { get; set; }
 }

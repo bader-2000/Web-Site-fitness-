@@ -1,0 +1,99 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 40px; /* تم زيادة القيمة لإزاحة الشعار إلى اليمين */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 50%;
+    /* No background */
+}
+
+    .logo-container:hover {
+        transform: scale(1.1); /* Scale up on hover */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    }
+
+.logo-icon {
+    font-size: 30px; /* Adjusted size to fit within 50x50 */
+    color: #fff;
+    margin-right: 5px;
+    animation: pulse 1.5s infinite ease-in-out; /* Pulse effect */
+}
+
+.logo-text {
+    font-size: 12px; /* Adjusted size to fit within 50x50 */
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: fadeIn 2s ease-out; /* Fade-in effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+
+@keyframes pulse {
+    0%
+
+{
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.2);
+}
+
+100% {
+    transform: scale(1);
+}
+
+}
+
+@keyframes fadeIn {
+    0%
+
+{
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-container
+
+{
+    top: 10px;
+    left: 10px;
+    padding: 8px;
+}
+
+.logo-text {
+    font-size: 10px;
+}
+
+.logo-icon {
+    font-size: 20px;
+}
+
+}
+

@@ -1,0 +1,36 @@
+
+
+.custom-field {
+    background-color: #222; /* خلفية الحقول سوداء */
+    color: #fff; /* لون النص أبيض */
+    border: 1px solid #444; /* حواف رمادية */
+    border-radius: 8px; /* زوايا مستديرة */
+    padding: 10px; /* تباعد داخلي */
+    font-size: 16px; /* حجم الخط */
+}
+
+.custom-field:focus {
+    border-color: #007bff; /* لون الحدود عند التركيز */
+    box-shadow: 0 0 5px #007bff; /* تأثير التركيز */
+    outline: none; /* إزالة الإطار الافتراضي */
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+textarea.custom-field {
+    resize: none; /* منع تغيير حجم النص */
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.card .card-body {
+    background-color: black;
+    padding: 1.75rem 1.5625rem;
+}

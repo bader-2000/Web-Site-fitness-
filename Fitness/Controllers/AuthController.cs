@@ -32,17 +32,13 @@ namespace Fitness.Controllers
 
         public IActionResult login([Bind("Username,Userpassword")] Profile profile)
         {
-            // التأكد من أن المدخلات ليست فارغة
-            if (string.IsNullOrEmpty(profile.Username) || string.IsNullOrEmpty(profile.Userpassword))
-            {
-                ViewBag.ErrorMessage = "Username or Password cannot be empty.";
-                return View("loginAndRegister");
-            }
+
+
 
             var authuperson = _context.Profiles
-                .Where(x => x.Username.ToLower() == profile.Username.ToLower() && x.Userpassword == profile.Userpassword)
+                .Where(x => x.Username.ToLower().Trim() == profile.Username.ToLower().Trim() && x.Userpassword == profile.Userpassword)
                 .SingleOrDefault();
-            var Rname = _context.Roles.Where(x=>x.Roleid == authuperson.Roleid).SingleOrDefault();
+            var Rname = _context.Roles.Where(x=>x.Roleid == authuperson.Roleid).FirstOrDefault();
 
             if (authuperson != null)
             {
@@ -80,9 +76,9 @@ namespace Fitness.Controllers
                     return View("loginAndRegister");
                 }
             }
+                    
 
-            
-            ViewBag.ErrorMessage = "User Name or Password is not correct.";
+                ViewBag.ErrorMessage = "User Name or Password is not correct.";
             return View("loginAndRegister");
         }
 
