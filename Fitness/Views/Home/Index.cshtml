@@ -565,7 +565,43 @@
  		</div>
  	</div>
  </section>
+<style>
+    .btn-gray {
+        padding:20px;
+        background-color: #808080; /* لون رمادي */
+        color: white; /* لون النص */
+        height: 50px; /* تحديد طول الزر */
+        line-height: 50px; /* لضمان محاذاة النص عمودياً داخل الزر */
+        text-align: center; /* محاذاة النص أفقياً */
+        font-size: 1.2rem; /* حجم النص */
+        text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+        border: none; /* إزالة الحدود */
+        display: block; /* يجعل العنصر يأخذ عرض الصفحة */
+        width: 100%; /* عرض الزر بالكامل */
+        margin: 10px 0; /* مسافة حول الزر */
+        text-decoration: none; /* إزالة التسطير */
+        cursor: pointer; /* تغيير المؤشر عند التمرير */
+    }
 
+        .btn-gray:hover {
+            background-color: #696969; /* لون أغمق عند التمرير */
+            color: #fff; /* لون النص عند التمرير */
+        }
+
+
+</style>
+ <section>
+
+
+
+    <a asp-action="Create" asp-controller="Home" class="btn btn-gray btn-block">
+                You can send your opinion
+            </a>
+
+   
+
+
+ </section> 
  <section class="latest-blogs bg-black padding-medium light">
  	<h2 class="section-title text-center mb-5">Blogs</h2>
  	<div class="container">

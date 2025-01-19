@@ -1,6 +1,7 @@
 ﻿@model Fitness.Models.Profile
 
 @{
+
     ViewData["Title"] = "Details";
     var UserRoleID = Context.Session.GetInt32("UserRoleID"); 
 
@@ -14,11 +15,12 @@
     }
     else
     {
-        Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+        Layout = "~/Views/Shared/_LayoutProfilePage.cshtml";
     }
    
-}
 
+   
+}
 <link href="~/DesignProfileUser/style.css" rel="stylesheet" id="bootstrap-css">
 
 

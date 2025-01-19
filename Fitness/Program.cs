@@ -22,6 +22,9 @@ namespace Fitness
             });
            builder.Services.AddDbContext<ModelContext>(options => options.UseOracle(builder.Configuration.GetConnectionString("FitnessDBSystemConnection")));
 			builder.Services.AddDistributedMemoryCache();
+			builder.Services.AddDbContext<ModelContext>(options => 	options.UseSqlServer("FitnessDBSystemConnection")
+		   .EnableSensitiveDataLogging());
+
 			builder.Services.AddSession(options => {
 				options.IdleTimeout = TimeSpan.FromMinutes(60);
 				options.Cookie.HttpOnly = true;

@@ -1,0 +1,55 @@
+
+.bg-primary {
+    background-color: black !important; /* تأكيد أن الخلفية ستكون سوداء */
+}
+
+.profile-container {
+    background-color: #333; /* خلفية سوداء */
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* النص باللون الأبيض */
+}
+
+.card-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.detail-item {
+    background-color: #444; /* خلفية داكنة للعناصر */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .detail-item strong {
+        color: #fff; /* النص باللون الأبيض */
+        font-size: 1.1rem;
+    }
+
+    .detail-item p {
+        font-size: 1rem;
+        color: #ddd; /* لون النص بلون فاتح قليلاً */
+    }
+
+.card-header {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bg-primary {
+    background-color: black !important;
+}
+
+.bg-success {
+    background-color: black !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.card-body hr {
+    border-top: 2px solid #ddd; /* خط فاصل بين الأقسام */

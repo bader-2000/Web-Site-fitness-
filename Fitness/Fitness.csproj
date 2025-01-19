@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="iText7" Version="9.0.0" />
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.0" />
+    <PackageReference Include="itext7" Version="9.0.0" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="9.0.0" />
+    <PackageReference Include="itext7.bouncy-castle-fips-adapter" Version="9.0.0" />
     <PackageReference Include="JSZip" Version="3.10.1" />
+    <PackageReference Include="MailKit" Version="4.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.35" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
@@ -20,6 +24,10 @@
     <PackageReference Include="ODP.NetCore" Version="2.0.12" />
     <PackageReference Include="Oracle.EntityFrameworkCore" Version="7.21.9" />
     <PackageReference Include="pdfmake" Version="0.1.18" />
+    <PackageReference Include="PDFsharp" Version="6.1.1" />
+    <PackageReference Include="QuestPDF" Version="2024.12.2" />
+    <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="28.1.39" />
+    <PackageReference Include="Syncfusion.Pdf.Net.Core" Version="28.1.39" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +36,10 @@
 
   <ItemGroup>
     <Content Update="Views\Admin\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Home\Create.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

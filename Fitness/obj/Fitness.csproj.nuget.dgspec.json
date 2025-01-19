@@ -50,9 +50,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BouncyCastle.Cryptography": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
             "JSZip": {
               "target": "Package",
               "version": "[3.10.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -84,7 +92,31 @@
               "target": "Package",
               "version": "[7.21.9, )"
             },
-            "iText7": {
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[6.1.1, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.12.2, )"
+            },
+            "Syncfusion.EJ2.AspNet.Core": {
+              "target": "Package",
+              "version": "[28.1.39, )"
+            },
+            "Syncfusion.Pdf.Net.Core": {
+              "target": "Package",
+              "version": "[28.1.39, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "itext7.bouncy-castle-fips-adapter": {
               "target": "Package",
               "version": "[9.0.0, )"
             },

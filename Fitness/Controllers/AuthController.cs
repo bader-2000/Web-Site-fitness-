@@ -50,9 +50,10 @@ namespace Fitness.Controllers
                     HttpContext.Session.SetString("UserRoleName", Rname.Rname ?? "Unknown Role");
                     HttpContext.Session.SetInt32("UserID", (int)authuperson.Profileid);
                     HttpContext.Session.SetInt32("UserRoleID", (int)authuperson.Roleid);
+				
 
-                    
-                    HttpContext.Session.SetInt32("UserIsEnter", 1);
+
+					HttpContext.Session.SetInt32("UserIsEnter", 1);
 
                     switch (authuperson.Roleid)
                     {
@@ -84,54 +85,7 @@ namespace Fitness.Controllers
 
 
 
-        //     public IActionResult login([Bind("Username,Userpassword")] Profile profile)
-        //     {
-
-
-        //             var authuperson = _context.Profiles.Where(x => x.Username == profile.Username && x.Userpassword == profile.Userpassword).SingleOrDefault();
-
-
-        //         if (authuperson != null)
-        //         {
-        //             try
-        //             {
-        //            // إعداد البيانات في الجلسة
-        //            HttpContext.Session.SetString("UserPhoto", authuperson.Photo);
-        //            HttpContext.Session.SetString("UserNameandLastname", authuperson.Name + " " + authuperson.Lname);
-        //            HttpContext.Session.SetString("UserRoleName", authuperson.Role.Rname);
-        //            HttpContext.Session.SetInt32("UserID",(Int32)authuperson.Profileid);
-        //                 HttpContext.Session.SetInt32("UserRoleID",(Int32)authuperson.Roleid);
-        //                 switch (authuperson.Roleid)
-        //                 {
-        //                     case 1:
-
-        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
-
-        //                         return RedirectToAction("Index", "Admin");
-
-        //                     case 2:
-        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
-        //                         return RedirectToAction("listProfileMembar", "Trainer");
-
-        //                     case 3:
-        //                         HttpContext.Session.SetInt32("UserIsEnter", 1);
-        //                         return RedirectToAction("Index", "Home");
-
-        //                     default:
-        //                         ViewBag.UserIsEnter = false;
-        //                         return RedirectToAction("Index", "Home");
-        //                 }
-        //             }
-        //             catch (Exception ex)
-        //             {
-        //                 ViewBag.ErrorMessage = ex.Message;
-        //                 ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
-        //             }
-        //         }   
-
-        //ViewBag.ErrorMessage = "User Name Or Password is Not Correct";
-        //         return RedirectToAction("loginAndRegister");
-        //     }
+      
 
         [HttpPost]
         [ValidateAntiForgeryToken]

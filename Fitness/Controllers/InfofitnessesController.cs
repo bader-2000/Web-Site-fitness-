@@ -103,8 +103,7 @@ namespace Fitness.Controllers
                 return NotFound();
             }
 
-            // تحميل قائمة الـ Profiles لعرضها في الـ SelectList
-            ViewData["Inprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", infofitness.Inprofileid);
+           
             return View(infofitness);
         }
 
@@ -122,7 +121,7 @@ namespace Fitness.Controllers
             {
                 try
                 {
-                    // التعامل مع الصورة الجديدة إذا تم رفعها
+                 
                     if (infofitness.ImageFileaboutus != null)
                     {
                         string wwwRootPath = _webHostEnvironment.WebRootPath;
@@ -134,11 +133,11 @@ namespace Fitness.Controllers
                             await infofitness.ImageFileaboutus.CopyToAsync(fileStream);
                         }
 
-                        // تحديث اسم الصورة في الكائن
+                      
                         infofitness.Photoaboutus = filename;
                     }
 
-                    // تحديث السجل في قاعدة البيانات
+              
                     _context.Update(infofitness);
                     await _context.SaveChangesAsync();
                 }
@@ -149,74 +148,13 @@ namespace Fitness.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            // في حالة وجود أخطاء في النموذج، إعادة تحميل قائمة الـ Profiles
+            
             ViewData["Inprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", infofitness.Inprofileid);
             return View(infofitness);
         }
 
         
 
-        //// GET: Infofitnesses/Edit/5
-        //public async Task<IActionResult> Edit(decimal? id)
-        //{
-        //    if (id == null || _context.Infofitnesses == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var infofitness = await _context.Infofitnesses.FindAsync(id);
-        //    if (infofitness == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    ViewData["Inprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", infofitness.Inprofileid);
-        //    return View(infofitness);
-        //}
-
-        //// POST: Infofitnesses/Edit/5
-        //// To protect from overposting attacks, enable the specific properties you want to bind to.
-        //// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(decimal id, [Bind("Idif,Email,Phone,Location,Aboutus,Facebook,Linkedin,ImageFileaboutus,Inprofileid")] Infofitness infofitness)
-        //{
-        //    if (id != infofitness.Idif)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            String wwwRootPath = _webHostEnvironment.WebRootPath;
-        //            String filename = Guid.NewGuid().ToString() + "_" + infofitness.ImageFileaboutus.FileName;
-        //            String path = Path.Combine(wwwRootPath + "/images/" + filename);
-
-        //            using (var filestrem = new FileStream(path, FileMode.Create))
-        //            {
-        //                await infofitness.ImageFileaboutus.CopyToAsync(filestrem);
-        //            }
-        //            infofitness.Photoaboutus = filename;
-        //            _context.Update(infofitness);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!InfofitnessExists(infofitness.Idif))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    ViewData["Inprofileid"] = new SelectList(_context.Profiles, "Profileid", "Profileid", infofitness.Inprofileid);
-        //    return View(infofitness);
-        //}
 
         // GET: Infofitnesses/Delete/5
         public async Task<IActionResult> Delete(decimal? id)

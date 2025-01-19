@@ -1,0 +1,168 @@
+﻿@model Fitness.Models.Subscription
+
+@{
+
+    ViewData["Title"] = "Details";
+    var UserRoleID = Context.Session.GetInt32("UserRoleID"); 
+
+    if (UserRoleID.HasValue && (UserRoleID == 1))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else if (UserRoleID.HasValue && (UserRoleID == 2))
+    {
+        Layout = "~/Views/Shared/_LayoutTrainer.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutProfilePage.cshtml";
+    }
+    var ListMore = ViewBag.MoreDetils;
+    var plan = ViewBag.plan;
+
+   
+}
+
+<link rel="stylesheet" href="~/css/UserSubscritopnPage.css" />
+
+
+<link rel="stylesheet" href="~/DesignProfileUser/ditelsProfile.css" />
+<div class="container mt-5">
+    @if (Model != null && Model.Countweeks != null && Model.Nameplan != null && Model.Price != null && ListMore != null)
+    {
+        <!-- First Card: Membership Information -->
+        <div class="card profile-container shadow-lg rounded-lg mb-4">
+            <div class="card-header text-center bg-primary text-white">
+                <h1>Your Membership</h1>
+            </div>
+            <div class="card-body">
+                <hr />
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>@Html.DisplayNameFor(model => model.Countweeks):</strong>
+                            <p>@Html.DisplayFor(model => model.Countweeks) weeks</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>@Html.DisplayNameFor(model => model.Nameplan):</strong>
+                            <p>@Html.DisplayFor(model => model.Nameplan)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>@Html.DisplayNameFor(model => model.Price):</strong>
+                            <p>@Html.DisplayFor(model => model.Price) USD</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Start Date:</strong>
+                            <p>@ListMore.Startdate?.ToString("yyyy-MM-dd")</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>End Date:</strong>
+                            <p>@ListMore.Enddate?.ToString("yyyy-MM-dd")</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Status:</strong>
+                            <p>@ListMore.Status</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Card: Plan Information -->
+        <div class="card profile-container shadow-lg rounded-lg">
+            <div class="card-header text-center bg-success text-white">
+                <h1>Plan Information</h1>
+            </div>
+            <div class="card-body">
+                <hr />
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Count Week:</strong>
+                            <p>@plan.Numberofweek</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Goals:</strong>
+                            <p>@plan.Goals</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 1:</strong>
+                            <p>@plan.Day1</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 2:</strong>
+                            <p>@plan.Day2</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 3:</strong>
+                            <p>@plan.Day3</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 4:</strong>
+                            <p>@plan.Day4</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 5:</strong>
+                            <p>@plan.Day5</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 6:</strong>
+                            <p>@plan.Day6</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="detail-item">
+                            <strong>Day 7:</strong>
+                            <p>@plan.Day7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Action Links -->
+        <div class="card profile-container shadow-lg rounded-lg">
+            <div class="card-body text-center">
+                <a class="btn btn-warning" asp-action="SendPdf">Send Me Detils my Subsecription</a> |
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            You do not have any subscription
+        </div>
+    }
+</div>
+
+
+   
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+

@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿﻿
+
+<!DOCTYPE html>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
 	<title>FitPhysique - Free Fitness/Gym HTML CSS Template by TemplatesJungle.com</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,89 +29,85 @@
 
 
 </head>
+
+
 <body>
 	<div id="body-wrapper">
 
-	<header id="header" class="bg-black">
-		<div class="container">
-			<div class="row">
-				<nav class="navbar navbar-expand-lg col-md-12 padding-small">
-					<div class="nav-brand">
-						<a href="index.html"><img src="~/DesignHomePage/images/logo.png"></a>
-					</div>
-					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-							data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
-							aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
-					</button>
-					<div class="navbar-collapse collapse text-hover" id="slide-navbar-collapse">
-						<ul class="navbar-nav list-inline light text-uppercase">
+		<header id="header" class="bg-black">
+			<div class="container">
+				<div class="row">
+					<nav class="navbar navbar-expand-lg col-md-12 padding-small">
+						<div class="nav-brand">
+							<a href="index.html"><img src="~/DesignHomePage/images/logo.png"></a>
+						</div>
+						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+								data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse"
+								aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
+						</button>
+						<div class="navbar-collapse collapse text-hover" id="slide-navbar-collapse">
+							<ul class="navbar-nav list-inline light text-uppercase">
 								<li class="nav-item active"><a asp-action="index" asp-controller="Home" class="navlink">home</a></li>
 								<li class="nav-item"><a asp-action="aboutus" asp-controller="Home">about us</a></li>
 								<li class="nav-item"><a asp-action="trainers" asp-controller="Home">trainers</a></li>
 								<li class="nav-item"><a asp-action="Class" asp-controller="Home">class</a></li>
 								<li class="nav-item"><a asp-action="blog" asp-controller="Home">blog</a></li>
 								<li class="nav-item"><a asp-action="contactus" asp-controller="Home">contact us</a></li>
-							
-						@* 	<li class="nav-item"><a href="https://templatesjungle.gumroad.com/l/fitphysique-free-responsive-html-template" target="_blank" style="color:#d4000d ;">LogIn</a></li> *@
-						</ul>
-					</div><!--navbar-collapse-->
-					<div class="action-menu">
-						<div class="searchbar">
-							<a href="#" class="search-button search-toggle" data-selector=".navbar">
-								<i class="icon icon-search"></i>
-							</a>
-							<form role="search" method="get" class="search-box" action="">
-								<input class="search-field text search-input" placeholder="Search" type="search">
-							</form>
-						</div>
-							<div class="navbar-collapse collapse text-hover" id="slide-navbar-collapse" >
-							
+
+								@* 	<li class="nav-item"><a href="https://templatesjungle.gumroad.com/l/fitphysique-free-responsive-html-template" target="_blank" style="color:#d4000d ;">LogIn</a></li> *@
+							</ul>
+						</div><!--navbar-collapse-->
+						<div class="action-menu">
+							<div class="searchbar">
+								<a href="#" class="search-button search-toggle" data-selector=".navbar">
+									<i class="icon icon-search"></i>
+								</a>
+								<form role="search" method="get" class="search-box" action="">
+									<input class="search-field text search-input" placeholder="Search" type="search">
+								</form>
+							</div>
+							<div class="navbar-collapse collapse text-hover" id="slide-navbar-collapse">
+
 								<ul class="navbar-nav list-inline light text-uppercase">
-									<li class="dropdown" >
-									<a class="dropbtn">Me <iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
+									<li class="dropdown">
+										<a class="dropbtn">Me <iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
 
-									<div class="dropdown-content" >
-											
-											@{
+										<div class="dropdown-content">
 
-												var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID"));
-												var UserIsEnter =Context.Session.GetInt32("UserIsEnter");
-												var UserRoleID = Context.Session.GetInt32("UserRoleID");
-												
+											 @{
 
-												@if (UserIsEnter == 1 && UserID != null)
-												{
-													
-													<a asp-controller="ProfileUser" asp-action="Details" asp-route-id="@UserID" class="drop-item" style="color:#d4000d ; ">Profile</a>
-												<a asp-controller="Auth" asp-action="loginAndRegister" class="drop-item" style="color:#d4000d ; ">Logout</a>
-											}
-											else
-											{
-												
-												<a asp-action="loginAndRegister" asp-controller="Auth" target="_blank" style="color:#d4000d;">LogIn</a>
-												
-											}
+											 	var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID")?? 0);
+											 	var UserIsEnter = Context.Session.GetInt32("UserIsEnter")?? 0;
+											 	var UserRoleID = Context.Session.GetInt32("UserRoleID")?? 0;
 
-											}
-											
- }     </p>
-										
-									</div>
-								</li>
+											 }
 
-								
+											 @if (ViewBag.UserIsEnter == 1 && ViewBag.UserID != null)
+											 {
+											 	<a href="@Url.Action("Details", "ProfileUser", new { id = ViewBag.UserID })" class="drop-item" style="color:#d4000d;">Profile</a>
+											 	<a href="@Url.Action("LoginAndRegister", "Auth")" class="drop-item" style="color:#d4000d;">Logout</a>
+											 }
+											 else
+											 {
+											 	<a href="@Url.Action("LoginAndRegister", "Auth")" target="_blank" style="color:#d4000d;">LogIn</a>
+											 }
+
+										</div>
+									</li>
+
+
 								</ul>
 							</div>
 							<!--navbar-collapse--
-						</div>
-					</div><!--action-menu-->
-				</nav>
+								</div>
+							</div><!--action-menu-->
+					</nav>
+				</div>
 			</div>
-		</div>
-	</header>
-	
-	<div>
+		</header>
+
+		<div>
         @RenderBody()
     </div>
 
@@ -125,16 +123,21 @@
 							<p>Fitphysical Pvt Ltd is for build and fitness body sed do eiusmod,adipisicing elit</p>
 							<div class="address">
 								<ul class="list-unstyled">
-									<li>
-										<i class="icon icon-map-marker colored"></i>Lincoln Park Chicago, Illinois
+									 <li>
+										
+								
+									@* 		<i class="icon icon-map-marker colored"></i>
+										@ViewBag.infowebsite.Location
 									</li>
-									<li><i class="icon icon-phone colored"></i>(510) 710-3464 (510) 640-6326</li>
+									<li><i class="icon icon-phone colored"></i>@ViewBag.infowebsite.Phone</li>
 									<li>
 										<i class="icon icon-envelope colored"></i>
 										<div class="mail-address">
-											<a href="#" class="pr-10">hello@templatesjungle.com</a>
-											<a href="#">info@templatesjungle.com</a>
-										</div>
+											<a href="#" class="pr-10">@ViewBag.infowebsite.Email</a>
+											
+											
+										</div> *@
+									
 									</li>
 								</ul>
 							</div>
@@ -173,40 +176,27 @@
 							<div class="widget-content">
 								<ul class="d-flex d-flex-flow">
 									<li class="mb-2 mr-2">
-										<a href="#"><img src="~/DesignHomePage/images/david.jpg" alt="gym" class="sgalleryImg"></a>
-									</li>
-									<li class="mb-2 mr-2">
-										<a href="#"><img src="~/DesignHomePage/images/rosy.jpg" alt="gym" class="sgalleryImg"></a>
-									</li>
-									<li class="mb-2">
-										<a href="#"><img src="~/DesignHomePage/images/sofia.jpg" alt="gym" class="sgalleryImg"></a>
-									</li>
-									<li class="mb-2 mr-2">
-										<a href="#"><img src="~/DesignHomePage/images/matt.jpg" alt="gym" class="sgalleryImg"></a>
-									</li>
-									<li class="mb-2 mr-2">
-										<a href="#">
-											<img src="~/DesignHomePage/images/postitem2.jpg" alt="gym"
-												 class="sgalleryImg">
-										</a>
-									</li>
-									<li class="mb-2">
-										<a href="#">
-											<img src="~/DesignHomePage/images/postitem3.jpg" alt="gym"
-												 class="sgalleryImg">
-										</a>
-									</li>
-									<li class="mb-2 mr-2">
-										<a href="#">
-											<img src="~/DesignHomePage/images/postitem4.jpg" alt="gym"
-												 class="sgalleryImg">
-										</a>
-									</li>
-									<li class="mb-2 mr-2">
-										<a href="#">
-											<img src="~/DesignHomePage/images/postitem1.jpg" alt="gym"
-												 class="sgalleryImg">
-										</a>
+								@* 		@{
+
+											var profiles = ViewBag.Profile as List<Profile>;
+
+
+											
+										@if (profiles != null && profiles.Any())
+										{
+											@foreach (var profile in profiles)
+											{
+											<li class="mb-2 mr-2">
+												<a href="#"><img src="@Url.Content("~/images/" + profile.Photo)" alt="gym" class="sgalleryImg"></a>
+											</li>
+											}
+										}
+										else
+										{
+										<p>No profiles available.</p>
+										}
+ *@
+
 									</li>
 								</ul>
 
@@ -241,7 +231,7 @@
 				<div class="wrap flex-container">
 					<div class="copyright">
 						<p class="mb-0">
-							© Copyright 2022 FitPhysique. Free Template by <a href="https://templatesjungle.com" target="_blank">TemplatesJungle</a>.
+							© Copyright 2022 FitPhysique.
 						</p>
 					</div>
 					<div class="social-links mt-3">

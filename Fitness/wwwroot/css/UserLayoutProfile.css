@@ -1,0 +1,50 @@
+
+header {
+    background-color: #f0f0f0; /* رمادي فاتح */
+}
+
+/* تحسين الروابط */
+.nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #6c757d; /* رمادي داكن */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #ffffff; /* أبيض */
+        background-color: #007bff; /* أزرق */
+        border-radius: 5px;
+    }
+
+/* تمييز اسم الموقع */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff; /* أزرق */
+    transition: color 0.3s ease;
+}
+
+    .navbar-brand:hover {
+        color: #0056b3; /* أزرق داكن */
+    }
+
+/* تنسيق القائمة */
+.navbar-nav {
+    gap: 1rem; /* مسافة بين العناصر */
+}
+
+/* ظل القائمة */
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: black;
+}
+
+.footer[b-0unkzkovot] {
+    margin-top: 100px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+

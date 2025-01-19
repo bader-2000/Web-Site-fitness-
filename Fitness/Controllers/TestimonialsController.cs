@@ -190,6 +190,9 @@ namespace Fitness.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Testimoid,Feedback,Status,Tprofileid")] Testimonial testimonial)
         {
+            
+          
+
             if (ModelState.IsValid)
             {
                 _context.Add(testimonial);

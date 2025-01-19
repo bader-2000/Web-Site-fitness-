@@ -1,0 +1,87 @@
+﻿@model Fitness.Models.Testimonial
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+<h1 class="text-center">Create</h1>
+
+
+<!-- إضافة CSS -->
+<style>
+    .custom-btn {
+        background-color: #d3d3d3; /* اللون الرمادي الفاتح */
+        color: #000; /* نص الزر باللون الأسود */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease; /* إضافة تأثير الانتقال على اللون */
+    }
+
+        .custom-btn:hover {
+            background-color: #a9a9a9; /* اللون الرمادي الداكن عند التمرير */
+            color: #fff; /* تغيير النص إلى الأبيض عند التمرير */
+            cursor: pointer;
+        }
+
+    .btn:last-child {
+        color: black;
+        margin-right: 0;
+    }
+</style>
+
+
+<h1 class="text-center">Create</h1>
+
+<h4 class="text-center">Testimonial</h4>
+<hr />
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="col-md-6">
+        <div class="card shadow-lg" style="background-color: #f8f9fa; border-radius: 10px;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Share Your Feedback</h5>
+                <hr />
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Feedback" class="control-label"></label>
+                        <input asp-for="Feedback" class="form-control" placeholder="  Write Your Testimonial" />
+                        <span asp-validation-for="Feedback" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="control-label"></label>
+                        <input for="Feedback" id="name" placeholder="Your Name" class="form-control" />
+                    </div>
+                    <div class="form-group" hidden>
+                        <label asp-for="Status" class="control-label"></label>
+                        <input asp-for="Status" class="form-control" />
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" hidden>
+                        @{
+                            var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID"));
+                        }
+                        <label asp-for="Tprofileid" class="control-label"></label>
+                        <input asp-for="Tprofileid" class="form-control" asp-items="@UserID" hidden>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="Send" class="btn btn-light custom-btn" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
