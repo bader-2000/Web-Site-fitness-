@@ -2,8 +2,20 @@
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_LayoutAuth.cshtml";
-
+    var errorMessage = TempData["ErrorMessage"] as string;
 }
+
+
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        var message = '@errorMessage';
+        if (message) {
+            alert(message);
+        }
+    });
+</script>
 
 <link rel="stylesheet" href="~/css/LoginandRegestred.css">
 
@@ -96,13 +108,7 @@
                             <input type="password" asp-for="Userpassword" required>
                         </div>
 
-                        <!-- Error Message -->
-                        @if (ViewBag.ErrorMessage != null)
-                        {
-                            <div class="error-msg">
-                                @ViewBag.ErrorMessage
-                            </div>
-                        }
+                       
 
                         <div class="CTA">
                             <input type="submit" value="Login">

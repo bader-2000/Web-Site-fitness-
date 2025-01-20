@@ -30,30 +30,43 @@ namespace Fitness.Controllers
 
 
 
+
+
         public IActionResult login([Bind("Username,Userpassword")] Profile profile)
         {
 
 
 
             var authuperson = _context.Profiles
-                .Where(x => x.Username.ToLower().Trim() == profile.Username.ToLower().Trim() && x.Userpassword == profile.Userpassword)
-                .SingleOrDefault();
-            var Rname = _context.Roles.Where(x=>x.Roleid == authuperson.Roleid).FirstOrDefault();
+                   .AsEnumerable()
+                   .Where(x => x.Username.ToLower().Trim() == profile.Username.ToLower().Trim())
+                   .SingleOrDefault();
+
+
+        
+            if (authuperson == null)
+            {
+                TempData["ErrorMessage"] = "User not found.";
+                return RedirectToAction("loginAndRegister");
+            }
+            var Rname = _context.Roles.FirstOrDefault(x => x.Roleid == authuperson.Roleid);
+
+
 
             if (authuperson != null)
             {
                 try
                 {
-                  
-                    HttpContext.Session.SetString("UserPhoto", authuperson.Photo ?? "default_photo.png"); 
+
+                    HttpContext.Session.SetString("UserPhoto", authuperson.Photo ?? "default_photo.png");
                     HttpContext.Session.SetString("UserNameandLastname", $"{authuperson.Name} {authuperson.Lname}");
                     HttpContext.Session.SetString("UserRoleName", Rname.Rname ?? "Unknown Role");
                     HttpContext.Session.SetInt32("UserID", (int)authuperson.Profileid);
                     HttpContext.Session.SetInt32("UserRoleID", (int)authuperson.Roleid);
-				
 
 
-					HttpContext.Session.SetInt32("UserIsEnter", 1);
+
+                    HttpContext.Session.SetInt32("UserIsEnter", 1);
 
                     switch (authuperson.Roleid)
                     {
@@ -80,15 +93,15 @@ namespace Fitness.Controllers
                     return View("loginAndRegister");
                 }
             }
-                    
 
-                ViewBag.ErrorMessage = "User Name or Password is not correct.";
+
+            ViewBag.ErrorMessage = "User Name or Password is not correct.";
             return View("loginAndRegister");
         }
 
 
 
-      
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

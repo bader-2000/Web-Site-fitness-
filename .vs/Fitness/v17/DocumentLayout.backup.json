@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\userpayment\\addvisacard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\userpayment\\addvisacard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\profileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\profileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\auth\\loginandregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\auth\\loginandregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\profileuser\\myvisacard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\profileuser\\myvisacard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\controllers\\userpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\controllers\\userpaymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\userpayment\\choosewqplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\userpayment\\choosewqplan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|c:\\users\\qk-21\\desktop\\frist project (fitness)\\fitness\\fitness\\views\\profileuser\\mysubscription.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7A8E5AB-9E9E-4331-AE6F-BEA6B90A8C8A}|Fitness\\Fitness.csproj|solutionrelative:fitness\\views\\profileuser\\mysubscription.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 319,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,67 +50,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyVisaCard.cshtml",
               "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\MyVisaCard.cshtml",
               "RelativeDocumentMoniker": "Fitness\\Views\\profileuser\\MyVisaCard.cshtml",
               "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\MyVisaCard.cshtml",
               "RelativeToolTip": "Fitness\\Views\\profileuser\\MyVisaCard.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T04:57:35.182Z",
+              "WhenOpened": "2025-01-20T05:58:04.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAqwFoBAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T03:56:27.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChooseWQplan.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\UserPayment\\ChooseWQplan.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\UserPayment\\ChooseWQplan.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\UserPayment\\ChooseWQplan.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\UserPayment\\ChooseWQplan.cshtml",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIUAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-20T03:56:06.578Z",
+              "DocumentIndex": 1,
+              "Title": "ProfileUserController.cs",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\ProfileUserController.cs",
+              "RelativeDocumentMoniker": "Fitness\\Controllers\\ProfileUserController.cs",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\ProfileUserController.cs",
+              "RelativeToolTip": "Fitness\\Controllers\\ProfileUserController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T05:55:43.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserPaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\UserPaymentController.cs",
-              "RelativeDocumentMoniker": "Fitness\\Controllers\\UserPaymentController.cs",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\UserPaymentController.cs",
-              "RelativeToolTip": "Fitness\\Controllers\\UserPaymentController.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAUwA8BAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T16:30:24.668Z",
+              "Title": "loginAndRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Auth\\loginAndRegister.cshtml",
+              "RelativeDocumentMoniker": "Fitness\\Views\\Auth\\loginAndRegister.cshtml",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\Auth\\loginAndRegister.cshtml",
+              "RelativeToolTip": "Fitness\\Views\\Auth\\loginAndRegister.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-20T05:35:23.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AddVisaCard.cshtml",
-              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\UserPayment\\AddVisaCard.cshtml",
-              "RelativeDocumentMoniker": "Fitness\\Views\\UserPayment\\AddVisaCard.cshtml",
-              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\UserPayment\\AddVisaCard.cshtml",
-              "RelativeToolTip": "Fitness\\Views\\UserPayment\\AddVisaCard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAJAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Fitness\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Fitness\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA9wCcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T05:30:16.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MySubscription.cshtml",
+              "DocumentMoniker": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\MySubscription.cshtml",
+              "RelativeDocumentMoniker": "Fitness\\Views\\profileuser\\MySubscription.cshtml",
+              "ToolTip": "C:\\Users\\qk-21\\Desktop\\Frist Project (fitness)\\Fitness\\Fitness\\Views\\profileuser\\MySubscription.cshtml",
+              "RelativeToolTip": "Fitness\\Views\\profileuser\\MySubscription.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-19T17:20:57.038Z",
+              "WhenOpened": "2025-01-20T05:20:14.259Z",
               "EditorCaption": ""
             }
           ]
