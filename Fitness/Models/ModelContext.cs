@@ -133,41 +133,7 @@ public partial class ModelContext : DbContext
         });
 
 
-        //modelBuilder.Entity<Payment>(entity =>
-        //{
-        //    entity.HasKey(e => e.Paymentid).HasName("SYS_C008462");
-
-        //    entity.ToTable("PAYMENT");
-
-        //    entity.Property(e => e.Paymentid)
-        //        .ValueGeneratedOnAdd()
-        //        .HasColumnType("NUMBER")
-        //        .HasColumnName("PAYMENTID");
-        //    entity.Property(e => e.Amount)
-        //        .HasColumnType("NUMBER(18,2)")
-        //        .HasColumnName("AMOUNT");
-        //    entity.Property(e => e.Cardholdername)
-        //        .HasMaxLength(100)
-        //        .IsUnicode(false)
-        //        .HasColumnName("CARDHOLDERNAME");
-        //    entity.Property(e => e.Cardnumber)
-        //        .HasPrecision(16)
-        //        .HasColumnName("CARDNUMBER");
-        //    entity.Property(e => e.Expirydate)
-        //        .HasColumnType("DATE")
-        //        .HasColumnName("EXPIRYDATE");
-        //    entity.Property(e => e.Paymentdate)
-        //        .HasDefaultValueSql("SYSDATE ")
-        //        .HasColumnType("DATE")
-        //        .HasColumnName("PAYMENTDATE");
-        //    entity.Property(e => e.Profileid)
-        //        .HasColumnType("NUMBER(38)")
-        //        .HasColumnName("PROFILEID");
-
-        //    entity.HasOne(d => d.Profile).WithMany(p => p.Payments)
-        //        .HasForeignKey(d => d.Profileid)
-        //        .HasConstraintName("FK_PROFILE_PAYMENT");
-        //});
+     
 
         modelBuilder.Entity<Profile>(entity =>
         {

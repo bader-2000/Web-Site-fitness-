@@ -130,9 +130,9 @@
                                         <p class="card-text">Exercise Day 7 : @item.Day7</p>
                                     </div>
                                     <div class="card-footer text-muted">
-                                        <form asp-action="ChooseWQplan"  method="post" style="display:inline;">
+                                        <form asp-action="ChooseWQplan" asp-route-id="@item.Idwop" method="post" style="display:inline;">
                                             @Html.AntiForgeryToken()
-                                            <input type="hidden" name="Idwop" value="@item.Idwop" />
+                                            <input type="hidden" name="countweek" value="@item.Numberofweek" />
                                             <button type="submit" class="btn btn-success btn-sm">To Choose</button>
                                         </form>
                                     </div>

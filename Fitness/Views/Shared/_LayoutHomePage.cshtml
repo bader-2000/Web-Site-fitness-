@@ -77,15 +77,15 @@
 
 											 @{
 
-											 	var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID")?? 0);
-											 	var UserIsEnter = Context.Session.GetInt32("UserIsEnter")?? 0;
-											 	var UserRoleID = Context.Session.GetInt32("UserRoleID")?? 0;
+												var UserID = Convert.ToDecimal(Context.Session.GetInt32("UserID"));
+											 	var UserIsEnter = Context.Session.GetInt32("UserIsEnter");
+											 	var UserRoleID = Context.Session.GetInt32("UserRoleID");
 
 											 }
 
-											 @if (ViewBag.UserIsEnter == 1 && ViewBag.UserID != null)
+											 @if (UserIsEnter == 1 && UserID != null)
 											 {
-											 	<a href="@Url.Action("Details", "ProfileUser", new { id = ViewBag.UserID })" class="drop-item" style="color:#d4000d;">Profile</a>
+												<a href="@Url.Action("Details", "ProfileUser", new { id = UserID })" class="drop-item" style="color:#d4000d;">Profile</a>
 											 	<a href="@Url.Action("LoginAndRegister", "Auth")" class="drop-item" style="color:#d4000d;">Logout</a>
 											 }
 											 else

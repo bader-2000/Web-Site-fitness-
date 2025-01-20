@@ -58,12 +58,15 @@ namespace Fitness.Controllers
                     switch (authuperson.Roleid)
                     {
                         case 1:
+                            HttpContext.Session.SetInt32("UserIsEnter", 1);
                             return RedirectToAction("Index", "Admin");
 
                         case 2:
+                            HttpContext.Session.SetInt32("UserIsEnter", 1);
                             return RedirectToAction("listProfileMembar", "Trainer");
 
                         case 3:
+                            HttpContext.Session.SetInt32("UserIsEnter", 1);
                             return RedirectToAction("Index", "Home");
 
                         default:

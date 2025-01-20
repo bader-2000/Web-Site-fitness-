@@ -90,6 +90,14 @@
     }
 </style>
 
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var message = '@TempData["SuccessMessage"]';
+        if (message) {
+            alert(message);
+        }
+    });
+</script>
 <div class="payment-page">
     <div class="container">
         <h2>Enter Visa Card Details</h2>
@@ -127,7 +135,7 @@
     <!-- Amount -->
     <div class="form-group">
         <label asp-for="Amount">Amount</label>
-        <input type="number" asp-for="Amount" required />
+                <input type="number" asp-for="Amount" value="@ViewBag.PriceSelect" required />
         <span asp-validation-for="Amount" class="text-danger"></span>
     </div>
 
@@ -139,10 +147,10 @@
     </div>
 
     <!-- Submit Button -->
-    <button type="submit" class="btn-submit">Complete Payment</button>
+    <button type="submit" class="btn-submit">Confirm Payment</button>
 
     <!-- Cancel Button -->
-    <a href="@Url.Action("Home", "Index")" class="btn-cancel">Cancel</a>
+    <a href="@Url.Action("Home", "index")" class="btn-cancel">Cancel</a>
 </form>
 
 @Html.ValidationSummary(true)
